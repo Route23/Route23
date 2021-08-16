@@ -1,4 +1,6 @@
 .nav {
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   padding-top: 1rem;
@@ -47,6 +49,15 @@
   border-radius: 50%;
 }
 
+.socialg {
+  position: relative;
+}
+.socialwrapper {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
 .social {
   display: block;
   margin-left: auto;
