@@ -151,6 +151,10 @@ $colors: 'black', 'blue', 'white';
   text-align: right;
 }
 
+.wrapper {
+  padding: 32px;
+}
+
 .wrapper__readable {
   max-width: 50em;
 }

@@ -4,7 +4,7 @@ import MainHead from '../components/MainHead.astro';
 import Button from '../components/Button/index.jsx';
 import Nav from '../components/Nav/index.jsx';
 import Footer from '../components/Footer/index.jsx';
-import PorfolioPreview from '../components/PortfolioPreview/index.jsx';
+import Blog from '../components/Blog/index.jsx';
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = Astro.fetchContent('./project/**/*.md');
@@ -15,7 +15,7 @@ const featuredProject = projects[0];
 ---
 <html lang="en">
   <head>
-    <MainHead title="Route23: Personal Site" />
+    <MainHead title="Route23" />
     <style lang="scss">
       .img {
         display: block;
@@ -114,7 +114,6 @@ const featuredProject = projects[0];
       .tree-view {
         height: 800px;
         margin-top: 90px;
-        padding: 0 32px;
       }
     </style>
   </head>
@@ -124,7 +123,7 @@ const featuredProject = projects[0];
       <!-- <div class="grid">
         <div class="section">
           <h3 class="sectionTitle">Selected Work</h3>
-          <PorfolioPreview project={featuredProject} />
+          <Blog project={featuredProject} />
           <div class="tac mt4">
             <a href="/projects">
               <Button>View All</Button>

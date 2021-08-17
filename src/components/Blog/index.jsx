@@ -1,7 +1,7 @@
 import { h } from 'preact';
 import Styles from './styles.module.scss';
 
-function PortfolioPreview({ project }) {
+function Blog({ project }) {
   return (
     <div className={Styles.card}>
       <div className={Styles.titleCard} style={`background-image:url(${project.img})`}>
@@ -25,4 +25,4 @@ function PortfolioPreview({ project }) {
   );
 }
 
-export default PortfolioPreview;
+export default Blog;
