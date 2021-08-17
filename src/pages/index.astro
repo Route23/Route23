@@ -17,33 +17,6 @@ const featuredProject = projects[0];
   <head>
     <MainHead title="Route23: Personal Site" />
     <style lang="scss">
-      .header {
-        align-items: center;
-        display: flex;
-        position: relative;
-        overflow: hidden;
-        padding-left: 32px;
-        padding-right: 32px;
-        background-color: #000;
-        color: #fff;
-      }
-
-      .monogram {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        margin: 0 0 12px 6px;
-        padding-right: 2px;
-        font-size: 20px;
-        color: #000;
-        background-color: #fccc0a;
-        font-weight: 900;
-        letter-spacing: -0.125rem;
-        border-radius: 50%;
-      }
-
       .img {
         display: block;
         width: 100%;
@@ -132,16 +105,23 @@ const featuredProject = projects[0];
           font-size: var(--f-u4);
         }
       }
+      summary {
+        display: block;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      .tree-view {
+        height: 800px;
+        margin-top: 90px;
+        padding: 0 32px;
+      }
     </style>
   </head>
   <body>
     <Nav />
-    <header class="header">
-      <h1 class="title">Route</h1>
-      <div class="monogram">23</div>
-    </header>
     <main class="wrapper">
-      <div class="grid">
+      <!-- <div class="grid">
         <div class="section">
           <h3 class="sectionTitle">Selected Work</h3>
           <PorfolioPreview project={featuredProject} />
@@ -164,7 +144,88 @@ const featuredProject = projects[0];
             <a href="/about">Read more</a>
           </p>
         </div>
-      </div>
+      </div> -->
+      <ul class="tree-view">
+        <li>
+          <details open>
+            <summary>JavaScript</summary>
+            <ul>
+              <li>Avoid at all costs</li>
+              <li>
+                <details open>
+                  <summary>Unless</summary>
+                  <ul>
+                    <li>Avoid</li>
+                    <li>
+                      <details open>
+                        <summary>At</summary>
+                        <ul>
+                          <li>
+                            <details open>
+                              <summary>At</summary>
+                              <ul>
+                                <li>
+                                  <details open>
+                                    <summary>At</summary>
+                                    <ul>
+                                      <li>
+                                        <details open>
+                                          <summary>At</summary>
+                                          <ul>
+                                            <li>Avoid</li>
+                                            <li>At</li>
+                                            <li>All</li>
+                                            <li>Cost</li>
+                                          </ul>
+                                        </details>
+                                      </li>
+                                      <li>At</li>
+                                      <li>All</li>
+                                      <li>Cost</li>
+                                    </ul>
+                                  </details>
+                                </li>
+                                <li>At</li>
+                                <li>
+                                  <details open>
+                                    <summary>At</summary>
+                                    <ul>
+                                      <li>
+                                        <details open>
+                                          <summary>At</summary>
+                                          <ul>
+                                            <li>Avoid</li>
+                                            <li>At</li>
+                                            <li>All</li>
+                                            <li>Cost</li>
+                                          </ul>
+                                        </details>
+                                      </li>
+                                      <li>At</li>
+                                      <li>All</li>
+                                      <li>Cost</li>
+                                    </ul>
+                                  </details>
+                                </li>
+                                <li>Cost</li>
+                              </ul>
+                            </details>
+                          </li>
+                          <li>At</li>
+                          <li>All</li>
+                          <li>Cost</li>
+                        </ul>
+                      </details>
+                    </li>
+                    <li>All</li>
+                    <li>Cost</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
     </main>
     <Footer />
   </body>
