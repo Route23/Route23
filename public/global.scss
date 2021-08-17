@@ -198,7 +198,7 @@ ul.tree-view ul {
 
 ul.tree-view ul > li {
   position: relative;
-  padding-left: 14px;
+  padding-left: 50px;
   width: fit-content;
 }
 ul.tree-view ul > li::before {
@@ -207,7 +207,7 @@ ul.tree-view ul > li::before {
   position: absolute;
   left: -17px;
   top: 10px;
-  width: 27px;
+  width: 63px;
   border-bottom: 3px solid #ffc800;
 }
 
@@ -233,7 +233,7 @@ ul.tree-view details[open] summary {
 }
 
 ul.tree-view ul details > summary:before {
-  margin-left: -25px;
+  margin-left: -41px;
   position: relative;
   z-index: 1;
   top: 1px;
