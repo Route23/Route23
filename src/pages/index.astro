@@ -17,100 +17,6 @@ const featuredProject = projects[0];
   <head>
     <MainHead title="Route23" />
     <style lang="scss">
-      .img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-
-      .gradient,
-      .gradient2 {
-        background-image: url('/assets/mesh-gradient.jpg');
-        pointer-events: none;
-        mix-blend-mode: screen;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-      }
-
-      .gradient2 {
-        mix-blend-mode: multiply;
-      }
-
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding-left: 2rem;
-      }
-
-      .title {
-        font-weight: 900;
-        font-size: var(--f-u8);
-        margin-bottom: 0.5rem;
-        margin-top: 0;
-      }
-
-      .grid {
-        display: grid;
-        grid-gap: 2rem;
-
-        @media (min-width: 1200px) {
-          grid-template-columns: 2fr 1fr;
-        }
-      }
-
-      .sectionTitle {
-        font-weight: 700;
-        font-size: var(--f-u8);
-        margin-top: 4rem;
-        margin-bottom: 2rem;
-        color: #fff;
-      }
-
-      .desc {
-        font-size: var(--f-u2);
-        margin-top: 1.5rem;
-        margin-bottom: 0;
-      }
-
-      .subtitle {
-        display: block;
-        font-weight: 400;
-        font-size: var(--f-d6);
-        letter-spacing: -0.0625em;
-      }
-
-      .bio {
-        line-height: 2;
-        margin-bottom: 2rem;
-        background-color: #000;
-        color: #fff;
-
-        > span:first-of-type {
-          line-height: 1;
-          margin-bottom: 0.5em;
-          display: block;
-          font-weight: 700;
-          font-size: var(--f-u4);
-        }
-      }
-      summary {
-        display: block;
-      }
-      summary::-webkit-details-marker {
-        display: none;
-      }
       .tree-view {
         height: 800px;
         margin-top: 40px;
@@ -120,48 +26,20 @@ const featuredProject = projects[0];
   <body>
     <Nav />
     <main class="wrapper">
-      <!-- <div class="grid">
-        <div class="section">
-          <h3 class="sectionTitle">Selected Work</h3>
-          <Blog project={featuredProject} />
-          <div class="tac mt4">
-            <a href="/projects">
-              <Button>View All</Button>
-            </a>
-          </div>
-        </div>
-        <div class="section">
-          <h3 class="sectionTitle">About me</h3>
-          <p class="bio">
-            <span>Hello!</span> I’m Jeanine, and this is my website. It was made using{' '}
-            <a href="https://github.com/snowpackjs/astro" target="_blank" rel="nofollow">
-              Astro
-            </a>
-            , a new way to build static sites. This is just an example template for you to modify.
-          </p>
-          <p>
-            <a href="/about">Read more</a>
-          </p>
-        </div>
-      </div> -->
       <ul class="tree-view">
         <li>
           <details open>
             <summary>Route23</summary>
             <ul>
               <li>
-                <details open>
-                  <summary>Web</summary>
+                <details>
+                  <summary class="shover">Junction601</summary>
                   <ul>
                     <li>
                       <details open>
-                        <summary>Frontend</summary>
+                        <summary class="shover">Web</summary>
                         <ul>
-                          <li>Frontend</li>
-                          <li>Frontend</li>
-                          <li>Frontend</li>
-                          <li>Frontend</li>
-                          <li>Frontend</li>
+                          <li><a href="../docs/front-end">Front-end</a></li>
                         </ul>
                       </details>
                     </li>
@@ -169,10 +47,10 @@ const featuredProject = projects[0];
                 </details>
               </li>
               <li>
-                <details open>
-                  <summary>Unless</summary>
+                <details>
+                  <summary class="shover">Junction602</summary>
                   <ul>
-                    <li><a href="../docs/wayfinding-search">Wayfinding</a></li>
+                    <li><a href="../docs/wayfinding-Research">Wayfinding Research</a></li>
                     <li>All</li>
                     <li>Cost</li>
                   </ul>
