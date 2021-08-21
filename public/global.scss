@@ -62,7 +62,11 @@ body {
   color: var(--t-fg);
   font-family: 'Inter', 'system-ui', sans-serif;
   background-color: #000;
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
 }
+
 
 * {
   box-sizing: content-box;
