@@ -6,9 +6,8 @@
 
 ## Commands
 
-| Command         | Action                                      |
-|:----------------|:--------------------------------------------|
-| `npm install`   | Installs dependencies                       |
-| `npm start`     | Starts local dev server at `localhost:3000` |
-| `npm run build` | Build your production site to `./dist/`     |
-
+```
+npm install
+npm start
+npm run build
+```
