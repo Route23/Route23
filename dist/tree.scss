@@ -1,0 +1,153 @@
+// list tree customize 98.css -----------------------------------------------
+ul.tree-view {
+  display: block;
+  padding: 6px;
+  margin: 0;
+  color: #fff;
+}
+
+ul.tree-view li {
+  list-style-type: none;
+}
+
+ul.tree-view ul,
+ul.tree-view li {
+  margin-top: 3px;
+  font-weight: 900;
+}
+
+ul.tree-view ul {
+  margin-left: 6px;
+  margin-top: -3px;
+  padding-left: 16px;
+  border-left: 3px solid #ffc800;
+}
+
+ul.tree-view ul > li {
+  position: relative;
+  padding-left: 50px;
+  width: fit-content;
+}
+ul.tree-view ul > li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -17px;
+  top: 10px;
+  width: 63px;
+  border-bottom: 3px solid #ffc800;
+}
+
+/* Cover the bottom of the left dotted border */
+ul.tree-view ul > li:last-child::after {
+  content: "";
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  left: -20px;
+  top: 13px;
+  bottom: 0px;
+  width: 8px;
+  background: var(--button-highlight);
+}
+
+ul.tree-view details {
+  margin-top: 0;
+}
+
+ul.tree-view details[open] summary {
+  margin-bottom: 0;
+}
+
+ul.tree-view ul details > summary:before {
+  margin-left: -41px;
+  position: relative;
+  z-index: 1;
+  top: 1px;
+}
+
+ul.tree-view details > summary:before {
+  text-align: center;
+  display: block;
+  float: left;
+  content: "";
+  color: #000;
+  border: 3px solid #ffc800;
+  width: 8px;
+  height: 9px;
+  line-height: 8px;
+  margin-top: 3px;
+  margin-right: 5px;
+  border-radius: 100%;
+  padding-left: 1px;
+  background-color: #000;
+}
+
+ul.tree-view details[open] > summary:before {
+  content: "-";
+  margin-top: 3px;
+}
+
+
+details {
+  margin-top: 12px;
+}
+
+summary {
+  display: block;
+  width: fit-content;
+  margin-left: -5px;
+  padding: 0 5px;
+  user-select: none;
+  cursor: pointer;
+  display: inline;
+  width: 100%;
+}
+
+summary:hover {
+  color: #000;
+  background-color: #ffc800;
+  border-radius: 15px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary {
+  width: fit-content;
+  margin-bottom: 8px;
+}
+
+ul.tree-view ul>li:last-child:after {
+  background-color: #000;
+}
+
+// tree a tag style
+ul.tree-view a {
+  padding: 0 10px 0 5px;
+  margin-left: -5px;
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+
+ul.tree-view a:hover {
+  color: #000;
+  background-color: #ffc800;
+  border-radius: 15px;
+  &::after {
+    content: "->";
+    display: block;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 0 15px 15px 0;
+    color: #000;
+    background-color: #ffc800;
+    position: absolute;
+    top: 0;
+    right: -10px;
+  }
+}
+// list tree customize 98.css -----------------------------------------------
