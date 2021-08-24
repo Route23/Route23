@@ -4,6 +4,8 @@
 
 <img src="public/assets/route23.png" width="100px">
 
+deploy site : https://route23.pages.dev/
+
 ## Commands
 
 ```
