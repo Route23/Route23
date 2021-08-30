@@ -4,7 +4,8 @@
 
 <img src="public/assets/route23.png" width="100px">
 
-deploy site : https://route23.pages.dev/
+deploy site : https://route23.pages.dev/ <br>
+deploy service : Cloudflare pages
 
 ## Commands
 
