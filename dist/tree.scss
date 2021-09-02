@@ -57,6 +57,7 @@ ul.tree-view details {
 
 ul.tree-view details[open] summary {
   margin-bottom: 0;
+  outline: none;
 }
 
 ul.tree-view ul details > summary:before {
