@@ -101,13 +101,13 @@ summary {
   user-select: none;
   cursor: pointer;
   display: inline;
-  width: 100%;
 }
 
 summary:hover {
   color: #000;
   background-color: #ffc800;
   border-radius: 15px;
+  width: fit-content;
 }
 
 summary::-webkit-details-marker {
