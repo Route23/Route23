@@ -30,3 +30,10 @@ npm run build
 |-------------------------------------------------------------|:---------|
 | <span style="background:#ff0000;color:#fff;">INACTIVE<span> | SubwayUI |
 | <span style="background:#ff0000;color:#fff;">INACTIVE<span> | gh-ibli  |
+
+## Donation
+ETH Address
+```
+0x1dE4649cf7D9362311F2Ed3caeDAfebd4DB31A6E
+```
+<img src="public/assets/donation-address.png" width="100">
