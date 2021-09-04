@@ -14,3 +14,19 @@ npm install
 npm start
 npm run build
 ```
+
+## Junction
+
+| `601`                                                       | Web      |
+|-------------------------------------------------------------|:---------|
+| <span style="background:#ff0000;color:#fff;">INACTIVE<span> | Frontend |
+
+| `602`                                                       | Research            |
+|-------------------------------------------------------------|:--------------------|
+| <span style="background:#ff0000;color:#fff;">INACTIVE<span> | Wayfinding Research |
+| <span style="background:#ff0000;color:#fff;">INACTIVE<span> | Music Research      |
+
+| `603`                                                       | OSS      |
+|-------------------------------------------------------------|:---------|
+| <span style="background:#ff0000;color:#fff;">INACTIVE<span> | SubwayUI |
+| <span style="background:#ff0000;color:#fff;">INACTIVE<span> | gh-ibli  |
