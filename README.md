@@ -19,17 +19,17 @@ npm run build
 
 | `601`                                                                 | Web      |
 |-----------------------------------------------------------------------|:---------|
-| - ![#ff0000](https://placehold.it/15/ff0000/ffffff?text=+) `INACTIVE` | Frontend |
+| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) `INACTIVE` | Frontend |
 
 | `602`                                                       | Research            |
 |-------------------------------------------------------------|:--------------------|
-| <span style="background:#ff0000;color:#fff;">INACTIVE<span> | Wayfinding Research |
-| <span style="background:#ff0000;color:#fff;">INACTIVE<span> | Music Research      |
+| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) `INACTIVE` | Wayfinding Research |
+| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) `INACTIVE` | Music Research      |
 
 | `603`                                                       | OSS      |
 |-------------------------------------------------------------|:---------|
-| <span style="background:#ff0000;color:#fff;">INACTIVE<span> | SubwayUI |
-| <span style="background:#ff0000;color:#fff;">INACTIVE<span> | gh-ibli  |
+| ![#00ff00](https://via.placeholder.com/15/00ff00/fff?text=+) `ACTIVE` | SubwayUI |
+| ![#00ff00](https://via.placeholder.com/15/00ff00/fff?text=+) `ACTIVE` | gh-ibli  |
 
 ## Donation
 ETH Address
