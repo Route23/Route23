@@ -26,9 +26,12 @@ ETH Address
 ```
 <img src="public/assets/donation-address.png" width="100">
 
-## Junction
-![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) `(INACTIVE)`
-![#00ff00](https://via.placeholder.com/15/00ff00/fff?text=+) `(ACTIVE)`
+## OSS
+
+## Blog
+## Junction(docs)
+![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) (INACTIVE)
+![#00ff00](https://via.placeholder.com/15/00ff00/fff?text=+) (ACTIVE)
 
 <!--
 ---table fix---

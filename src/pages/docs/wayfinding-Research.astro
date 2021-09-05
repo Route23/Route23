@@ -1,4 +1,6 @@
 ---
+import { Markdown } from 'astro/components';
+
 import MainHead from '../../components/MainHead.astro';
 import Footer from '../../components/Footer/index.jsx';
 import Nav from '../../components/Nav/index.jsx';
@@ -7,18 +9,19 @@ import Nav from '../../components/Nav/index.jsx';
 <html lang="en">
   <head>
     <MainHead title="Docs | Wayfinding Research" />
-    <style lang="scss">
-      .wrapper {
-        color: #fff;
-        height: 800px;
-      }
-    </style>
   </head>
   <body>
     <Nav />
     <div class="wrapper">
-      <h1>Wayfinding Research</h1>
+      <!-- Astro’s Markdown Component ------------------>
+      <Markdown>
+        # Wayfinding Research
+        - aiueo
+        - aiueo
+        https://marketplace.visualstudio.com/items?itemName=idleberg.subway-dark
+      </Markdown>
+      <!-- Astro’s Markdown Component ------------------>
     </div>
     <Footer />
-</body>
+  </body>
 </html>
