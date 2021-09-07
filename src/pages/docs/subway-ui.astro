@@ -1,0 +1,27 @@
+---
+import { Markdown } from 'astro/components';
+
+import MainHead from '../../components/MainHead.astro';
+import Footer from '../../components/Footer/index.jsx';
+import Nav from '../../components/Nav/index.jsx';
+---
+
+<html lang="en">
+  <head>
+    <MainHead title="Docs | Subway UI" />
+    <link rel="stylesheet" href="/markdown.css">
+  </head>
+  <body>
+    <Nav />
+    <div class="wrapper">
+      <!-- Astro’s Markdown Component ------------------>
+      <Markdown>
+        # Subway UI
+        ## Github
+        - https://github.com/Route23/SubwayUI
+      </Markdown>
+      <!-- Astro’s Markdown Component ------------------>
+    </div>
+    <Footer />
+  </body>
+</html>
