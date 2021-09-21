@@ -11,7 +11,7 @@ const projects = Astro.fetchContent('./project/*.md')
 
 <html lang="en">
   <head>
-    <MainHead title="All Projects | Route23" />
+    <MainHead title="BLOG | Route23" />
     <link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
     <style lang="scss">
       .wrapper {
@@ -22,17 +22,19 @@ const projects = Astro.fetchContent('./project/*.md')
       .title {
         color: #fff;
       }
-      .grid {
-        display: grid;
-        grid-gap: 3rem;
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: flex-start;
       }
     </style>
   </head>
   <body>
     <Nav />
     <div class="wrapper">
-      <h1 class="title">All Projects</h1>
-      <div class="grid">
+      <h1 class="title">BLOG</h1>
+      <div class="flex">
         {projects.map((project) => (
           <Blog project={project} />
         ))}
