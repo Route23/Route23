@@ -1,8 +1,26 @@
+.wrapper {
+  height: 0 !important;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
 .card {
   position: relative;
   color: var(--t-bg);
-  background: var(--t-fg);
-  border: 1px solid #f0f0f0;
+  background: #000;
+  width: 23%;
+  box-sizing: border-box;
+  transition: 0.2s;
+  text-decoration: none;
+  border: 3px solid #000;
+  transition: 0.5s;
+  &:hover {
+    border: 3px solid #f0f0f0;
+    &>.titleCard {
+      filter: grayscale(0);
+    }
+  }
 }
 
 .title {
@@ -27,75 +45,55 @@
   background-size: cover;
   background-position: 50% 100%;
   padding-top: 37.5%;
-}
-
-.desc {
-  font-size: var(--f-u1);
-  line-height: 1.4;
+  transition: 0.5s;
+  filter: grayscale(100);
 }
 
 .link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--t-bg);
-  font-size: var(--f-u2);
-  font-weight: 700;
-  background: rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: opacity 150ms linear;
-  &:focus,
-  &:hover {
-    opacity: 1;
+  color: #fff;
+}
 
-    .linkInner {
-      transform: translateY(0);
-      border-color: rgba(255, 255, 255, 0.625);
-    }
+.desc, .date, .tags {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  padding: 10px;
+}
+
+.date, .tags {
+  padding-top: 0;
+  overflow: scroll;
+  &::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
   }
-}
-
-.linkInner {
-  padding: 0.375em 1em;
-  border: 2px solid rgba(255, 255, 255, 0);
-  transition: transform 300ms cubic-bezier(0, 0.4, 0.6, 1), border-color 1s linear;
-  transform: translateY(25%);
-}
-
-.nav {
-  display: flex;
-  justify-content: flex-end;
 }
 
 .tags {
-  font-size: var(--f-d2);
-  text-transform: uppercase;
+  margin-right: 10px;
 }
 
 .tag {
-  display: inline-block;
-  color: var(--c-yellow);
+  // margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding: 0 8px;
+  border-radius: 20px;
   text-transform: uppercase;
-  margin-left: 0.5em;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #ffc800;
+  color: #fff;
 
   &:nth-of-type(1n) {
-    color: var(--c-green);
+    background-color: rgb(207, 14, 14);
   }
   &:nth-of-type(2n) {
-    color: var(--c-orange);
+    background-color: rgb(2, 31, 193);
   }
   &:nth-of-type(3n) {
-    color: var(--c-blue);
+    background-color: rgb(19, 156, 9);
   }
   &:nth-of-type(4n) {
-    color: var(--c-pink);
+    background-color: var(--c-pink);
   }
 }
