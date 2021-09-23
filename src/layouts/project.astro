@@ -1,7 +1,6 @@
 ---
 import MainHead from '../components/MainHead.astro';
 import Button from '../components/Button/index.jsx';
-import Footer from '../components/Footer/index.jsx';
 import Nav from '../components/Nav/index.jsx';
 
 const { content } = Astro.props;
@@ -12,6 +11,7 @@ const date = cut_date.substring( 0, 10 );
 <html lang={ content.lang || 'en' }>
   <head>
     <MainHead title={content.title} />
+    <link rel="stylesheet" href="/markdown.css">
     <style lang="scss">
       .hero {
         padding: 8rem;
@@ -99,11 +99,10 @@ const date = cut_date.substring( 0, 10 );
     <div class="wrapper wrapper__readable">
       <div class="content"><slot></slot></div>
     </div>
-    <footer class="tac mt6">
+    <footer class="tac mt6 mb6">
       <a href="/projects">
         <Button>View More</Button>
       </a>
     </footer>
-    <Footer />
   </body>
 </html>
