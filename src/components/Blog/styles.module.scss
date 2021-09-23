@@ -23,6 +23,12 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 24px !important;
+  }
+}
+
 .title {
   position: absolute;
   top: 0;
@@ -82,18 +88,18 @@
   font-size: 12px;
   font-weight: 600;
   background-color: #ffc800;
-  color: #fff;
+  color: #000;
 
   &:nth-of-type(1n) {
-    background-color: rgb(207, 14, 14);
+    background-color: #ffc800;
   }
   &:nth-of-type(2n) {
-    background-color: rgb(2, 31, 193);
+    background-color: #ffc800;
   }
   &:nth-of-type(3n) {
-    background-color: rgb(19, 156, 9);
+    background-color: #ffc800;
   }
   &:nth-of-type(4n) {
-    background-color: var(--c-pink);
+    background-color: #ffc800;
   }
 }

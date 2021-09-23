@@ -12,9 +12,14 @@ import MainHead from '../../components/MainHead.astro';
   h1 #resume {
     margin-top: 0 !important;
   }
-  @media screen and (min-width: 769px) {
+  @media screen and (max-width: 450px) {
     :global(body) {
-      width: 50%;
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 451px) {
+    :global(body) {
+      width: 70%;
     }
   }
   :global(h1) {
