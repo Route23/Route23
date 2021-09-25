@@ -4,7 +4,6 @@
   justify-content: start;
   flex-wrap: wrap;
 }
-
 .card {
   position: relative;
   color: var(--t-bg);
@@ -22,13 +21,11 @@
     }
   }
 }
-
 @media screen and (min-width: 768px) {
   .title {
     font-size: 24px !important;
   }
 }
-
 .title {
   position: absolute;
   top: 0;
@@ -45,7 +42,6 @@
   text-transform: uppercase;
   letter-spacing: 0.0625em;
 }
-
 .titleCard {
   position: relative;
   background-size: cover;
@@ -54,19 +50,24 @@
   transition: 0.5s;
   filter: grayscale(100);
 }
-
 .link {
   color: #fff;
+  padding: 10px;
 }
-
+.desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.desc, .date {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 .desc, .date, .tags {
   font-size: 12px;
   font-weight: 600;
   line-height: 1.4;
-  margin: 0;
-  padding: 10px;
 }
-
 .date, .tags {
   padding-top: 0;
   overflow: scroll;
@@ -74,11 +75,9 @@
     display:none;
   }
 }
-
 .tags {
   margin-right: 10px;
 }
-
 .tag {
   // margin-left: 0.5em;
   margin-right: 0.5em;
