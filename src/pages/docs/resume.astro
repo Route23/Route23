@@ -1,0 +1,157 @@
+---
+import { Markdown } from 'astro/components';
+
+import MainHead from '../../components/MainHead.astro';
+---
+
+<html lang="en">
+<head>
+  <MainHead title="Resume" />
+</head>
+<style>
+  .wrapper {
+    margin-bottom: 40px;
+  }
+  h1 #resume {
+    margin-top: 0 !important;
+  }
+  @media screen and (max-width: 450px) {
+    :global(body) {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 451px) {
+    :global(body) {
+      width: 70%;
+    }
+  }
+  :global(h1) {
+    margin: 0;
+  }
+  :global(h3) {
+    margin-bottom: 0;
+  }
+  :global(p) {
+    margin: 0;
+  }
+  :global(a) {
+    color: #ffc800;
+  }
+  :global(blockquote) {
+    margin: 0;
+    color: #bbb;
+  }
+  :global(hr) {
+    margin-top: 18px !important;
+    color: #bbb;
+  }
+  :global(span > p) {
+  /* // margin-left: 0.5em; */
+    display: inline-block;
+    margin-right: 0.5em;
+    padding: 0 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    width: fit-content;
+    background-color: #fff;
+    color: #000;
+  }
+</style>
+<body>
+<!-- <Nav /> -->
+<div class="wrapper">
+<!-- Astro’s Markdown Component ------------------>
+<Markdown>
+# KOKI OKA
+
+---
+
+Tokyo, Japan  
+090-9167-1690  
+tetrapasta02@gmail.com  
+https://route23.pages.dev/  
+
+---
+
+## **WORK EXPERIENCE**
+
+System Engineer / Frontend Engineer
+
+
+### Programming learning service(Start up)
+> April 2020 -- December 2020
+
+> (HTML5, CSS3, JavaScript, Vue.js, Webpack, ESLint, Jest, AdobeXD, Github, Trello)
+
+*A service that allows users to buy and sell programming learning content without the need for environment development.I was mainly responsible for static coding of all administration and user screens, validation of payment screens, and implementation of component UI using Atomic Design. I also introduced and implemented unit tests using Jest almost entirely on my own.It was a great project that I was assigned to as a new graduate and it gave me a lot of experience.*
+
+---
+
+### Creation of a new business website for a major telecommunications company
+> January 2021
+
+> (HTML5, CSS3, JavaScript, Handlebar.js, jQuely, AdobeXD, Github)
+
+*Created a website to announce a new project for a major telecommunications company.The main tasks were to create new pages, fix bugs, and modify processing.*
+
+---
+
+### Maintenance and operation of a major recruiting service
+> February 2021 -- March 2021
+
+*Due to confidentiality agreements, I can't give you any details.*
+
+---
+
+### Store terminal application development for a major cosmetics manufacturer
+> April 2021 -- Current
+
+> (Pug, Stylus, JavaScript, Vue.js, Nuxt.js, AdobeXD, Github, Backlog)
+
+*In this project, developed an application to manage customer information in a store.My main task was to create screens, connect APIs, and test them with the latest front-end technologies.*
+
+---
+
+## **TERTIARY**
+
+### KINDAI University at Osaka
+> 2016 -- 2020
+
+*B.A. in Public Management of Economics.*
+
+<!-- [Kindai news pr](https://www.kindai.ac.jp/news-pr/news-release/2018/06/012872.html) -->
+---
+
+## SECONDARY
+
+### Chiben Gakuen Senior High School at Nara
+> 2013 -- 2016
+
+*Participated in the 66th All-Japan High School Ekiden Championship*
+
+[result](https://www.jaaf.or.jp/taikai/1292/1292_file_1.pdf)
+
+---
+
+## LINKS
+
+Github:[Coordinate-Cat](https://github.com/Coordinate-Cat)  
+Twitter:[ito_okash1](https://twitter.com/ito_okash1)
+
+---
+
+## INTEREST (in something)
+
+<span>Jamstack</span>
+<span>Svelte</span>
+<span>OS</span>
+<span>OSS</span>
+<span>UI/UX Design</span>
+
+</Markdown>
+<!-- Astro’s Markdown Component ------------------>
+</div>
+</body>
+</html>
