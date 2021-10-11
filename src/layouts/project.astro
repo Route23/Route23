@@ -53,16 +53,30 @@ const date = cut_date.substring( 0, 10 );
         background-color: #000;
       }
 
-      .tagline {
+      .date {
         font-weight: 900;
-        font-size: var(--f-u3);
-        line-height: 1.5;
+      }
+
+      .flex {
+        height: 20px;
+        display: flex;
+      }
+
+      .tagline {
+        color: #7c7c7c;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 0 32px;
+        margin: 0;
       }
 
       .content {
         font-size: var(--f-u1);
-        line-height: 2.2;
+        line-height: 1.2;
         color: #fff;
+        padding: 0 32px;
+        margin: 0;
       }
     </style>
   </head>
@@ -72,21 +86,23 @@ const date = cut_date.substring( 0, 10 );
       <h1 class="title">{content.title}</h1>
     </header>
     <div class="leadIn">
-      <div class="wrapper tags pt8 pb8 tal">
-        {content.tags.map((t) => (
-          <span class="tag">{t}</span>
-        ))}
-        <h2>{date}</h2>
-        <h3 class="tagline">{content.description}</h3>
+      <div class="wrapper">
+        <div class="tags tal flex">
+          {content.tags.map((t) => (
+            <span class="tag">{t}</span>
+          ))}
+          <div class="date">{date}</div>
+        </div>
       </div>
+      <h3 class="tagline">desc : {content.description}</h3>
     </div>
-    <div class="wrapper wrapper__readable">
+    <div class="pt0">
       <div class="content"><slot></slot></div>
     </div>
-    <footer class="tac mt6 mb6">
+    <!-- <footer class="tac mt6 mb6">
       <a href="/projects">
         <Button>View More</Button>
       </a>
-    </footer>
+    </footer> -->
   </body>
 </html>
