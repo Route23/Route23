@@ -13,8 +13,92 @@
 }
 figure {
   margin: 0;
+  & img {
+    border: 4px solid #fff;
+  }
   & figcaption {
     font-size: 12px;
-    color: #7c7c7c;
+    color: #fff;
+    text-transform: uppercase;
+    font-style: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    & cite {
+      font-style: normal;
+    }
   }
+}
+a {
+  color: #ffc800;
+}
+.hero {
+  padding: 8rem;
+  display: flex;
+  background-color: var(--t-fg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 25vw;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100);
+}
+
+.tags {
+  padding: 0 32px ;
+  margin-bottom: 20px;
+}
+
+.tag {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding: 0 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: #ffc800;
+  color: #000;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.title {
+  font-size: var(--f-u10);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+}
+
+.leadIn {
+  color: var(--t-bg);
+  background-color: #000;
+}
+
+.date {
+  font-weight: 900;
+}
+
+.flex {
+  height: 20px;
+  display: flex;
+}
+
+.tagline {
+  color: #7c7c7c;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 0 32px;
+  margin: 0;
+}
+
+.content {
+  font-size: var(--f-u1);
+  line-height: 1.2;
+  color: #fff;
+  padding: 0 32px;
+  margin: 0;
 }
