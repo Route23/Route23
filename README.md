@@ -6,7 +6,7 @@
 <img src="public/assets/route23.png" width="100px">
 
 ## About
-This repository is a portal application that organizes OSS, documentation, and blogs.
+This repository is a portal application that organizes OSS, documentation, and blog.
 Languages used are limited to React and Svelte.
 
 ## Deploy

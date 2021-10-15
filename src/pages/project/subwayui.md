@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/project.astro
-title: About Subway UI
+title: Subway UI
 client: Self
 published_at: 2021-10-01
 img: /assets/wayfinding0.jpg

@@ -1,10 +1,10 @@
 ---
 import MainHead from '../components/MainHead.astro';
-import Footer from '../components/Footer/index.jsx';
+// import Footer from '../components/Footer/index.jsx';
 import Nav from '../components/Nav/index.jsx';
 import Blog from '../components/Blog/index.jsx';
 
-const projects = Astro.fetchContent('./project/*.md')
+const blog = Astro.fetchContent('./project/*.md')
   .filter(({ published_at }) => !!published_at)
   .sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
 ---
@@ -27,7 +27,7 @@ const projects = Astro.fetchContent('./project/*.md')
           display: flex;
           flex-wrap: wrap;
           gap: 1em;
-          justify-content: flex-start;
+          justify-content: center;
         }
       }
       .wrapper {
@@ -37,6 +37,7 @@ const projects = Astro.fetchContent('./project/*.md')
       }
       .title {
         color: #fff;
+        text-align: center;
       }
     </style>
   </head>
@@ -45,11 +46,11 @@ const projects = Astro.fetchContent('./project/*.md')
     <div class="wrapper">
       <h1 class="title">BLOG</h1>
       <div class="flex">
-        {projects.map((project) => (
+        {blog.map((project) => (
           <Blog project={project} />
         ))}
       </div>
     </div>
-    <Footer />
+    <!-- <Footer /> -->
   </body>
 </html>
