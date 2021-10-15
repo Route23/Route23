@@ -14,22 +14,6 @@ const blog = Astro.fetchContent('./project/*.md')
     <MainHead title="BLOG | Route23" />
     <link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
     <style lang="scss">
-      @media screen and (max-width: 450px) {
-        .flex {
-          flex-wrap: wrap;
-          gap: 1em;
-          justify-content: flex-start;
-          width: 100%;
-        }
-      }
-      @media screen and (min-width: 768px) {
-        .flex {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 1em;
-          justify-content: center;
-        }
-      }
       .wrapper {
         margin-top: 60px;
         padding-left: 32px;
@@ -39,13 +23,18 @@ const blog = Astro.fetchContent('./project/*.md')
         color: #fff;
         text-align: center;
       }
+      .blogs {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
     <Nav />
     <div class="wrapper">
       <h1 class="title">BLOG</h1>
-      <div class="flex">
+      <div class="blogs">
         {blog.map((project) => (
           <Blog project={project} />
         ))}
