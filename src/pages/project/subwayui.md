@@ -8,6 +8,7 @@ description: |
   It's a story about a guy who was drinking and wanted to make something.
 tags:
   - SubwayUI
+char: 3,521
 ---
 I don't know what I was thinking, but that night after drinking, I suddenly felt the urge to create something.
 Drinking, watching movies, and coding are the main ways I spend my weekends.
@@ -77,10 +78,17 @@ I don't know how many more components will be added to figma in the future, but 
 I'm guessing that the details of margin, padding, and string placement will be fine-tuned during the coding process, but at this point I have zero confidence that it will work.<br>
 By the way, figma is always in a public state.[(Figma(Prototyping))](https://www.figma.com/file/5jOfkehBg8VJEITcPdMYKG/subwayUI-Project?node-id=0%3A1)
 
+The general flow is as follows.
 
+1. Prototyping
+2. CodeSandBox
+3. Document creation
 
+It's very rough, but it's my limit.
+The first prototyping is already breaking my heart, but I'm thinking of using codesandbox as an example to document afterwards. I'm trying to use MaterialUI as a reference for this. I thought it would be a good tutorial to actually see and touch the code.
 
-<!-- ## Links
+At the end of this article, I summarized the tools I use as follows
+
 - [Route23/SubwayUI](https://github.com/Route23/SubwayUI)
 - [Issues](https://github.com/Route23/SubwayUI/issues)
 - Blog(here)
@@ -89,4 +97,7 @@ By the way, figma is always in a public state.[(Figma(Prototyping))](https://www
 - [Figma(Prototyping)](https://www.figma.com/file/5jOfkehBg8VJEITcPdMYKG/subwayUI-Project?node-id=0%3A1)
 - [Whimsical](https://whimsical.com/subwayui-8RfsJ1ngcmbMsw8rr9XfsK)
 - [Zenn(Scraps)](https://zenn.dev/ocat/scraps/1a049790273f86)
-- [Inter Font](https://rsms.me/inter/) -->
+- [Inter Font](https://rsms.me/inter/)
+
+I'll try to keep blogs like this one on a regular basis.
+Thanks for reading to the end!

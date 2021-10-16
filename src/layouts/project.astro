@@ -18,16 +18,21 @@ const date = cut_date.substring( 0, 10 );
     <header style={`background-image:url(${content.img})`} class="hero">
       <h1 class="title">{content.title}</h1>
     </header>
-    <div class="leadIn">
-      <div class="leadIn_tags">
-        {content.tags.map((t) => (
-          <span>{t}</span>
-        ))}
-        <div class="leadIn_tags_date">{date}</div>
+    <div class="content">
+      <div class="leadIn">
+        <div class="leadIn_tags">
+          {content.tags.map((t) => (
+            <span>{t}</span>
+          ))}
+          <div class="leadIn_tags_date">{date} | </div>
+          <div class="leadIn_tags_char">{content.char} chars</div>
+        </div>
+        <div class="leadIn_desc">DESC : {content.description}</div>
       </div>
-      <div class="leadIn_desc">desc : {content.description}</div>
+      <!-- sentence start -->
+      <slot></slot>
+      <!-- sentence end -->
     </div>
-    <div class="content"><slot></slot></div>
     <!-- <footer class="tac mt6 mb6">
       <a href="/blog">
         <Button>View More</Button>
