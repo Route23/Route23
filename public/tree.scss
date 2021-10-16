@@ -1,8 +1,8 @@
 // list tree customize 98.css -----------------------------------------------
 ul.tree-view {
   display: block;
-  padding: 6px;
   margin: 0;
+  padding: 6px;
   color: #fff;
 }
 
@@ -17,38 +17,38 @@ ul.tree-view li {
 }
 
 ul.tree-view ul {
-  margin-left: 6px;
   margin-top: -3px;
+  margin-left: 6px;
   padding-left: 16px;
   border-left: 3px solid #ffc800;
 }
 
 ul.tree-view ul > li {
   position: relative;
-  padding-left: 50px;
   width: fit-content;
+  padding-left: 50px;
 }
 ul.tree-view ul > li::before {
-  content: "";
-  display: block;
   position: absolute;
-  left: -17px;
   top: 10px;
+  left: -17px;
+  display: block;
   width: 63px;
+  content: '';
   border-bottom: 3px solid #ffc800;
 }
 
 /* Cover the bottom of the left dotted border */
 ul.tree-view ul > li:last-child::after {
-  content: "";
-  display: block;
-  background-color: transparent;
   position: absolute;
-  left: -20px;
   top: 13px;
-  bottom: 0px;
+  bottom: 0;
+  left: -20px;
+  display: block;
   width: 8px;
+  content: '';
   background: var(--button-highlight);
+  background-color: transparent;
 }
 
 ul.tree-view details {
@@ -60,32 +60,32 @@ ul.tree-view details[open] summary {
 }
 
 ul.tree-view ul details > summary:before {
-  margin-left: -41px;
   position: relative;
   z-index: 1;
   top: 1px;
+  margin-left: -41px;
 }
 
 ul.tree-view details > summary:before {
-  text-align: center;
   display: block;
   float: left;
-  content: "";
-  color: #000;
-  border: 3px solid #ffc800;
   width: 8px;
   height: 9px;
-  line-height: 8px;
   margin-top: 3px;
   margin-right: 5px;
-  border-radius: 100%;
   padding-left: 1px;
+  content: '';
+  text-align: center;
+  color: #000;
+  border: 3px solid #ffc800;
+  border-radius: 100%;
   background-color: #000;
+  line-height: 8px;
 }
 
 ul.tree-view details[open] > summary:before {
-  content: "-";
   margin-top: 3px;
+  content: '-';
 }
 
 
@@ -95,20 +95,20 @@ details {
 
 summary {
   display: block;
+  display: inline;
   width: fit-content;
   margin-left: -5px;
   padding: 0 5px;
-  user-select: none;
   cursor: pointer;
-  display: inline;
+  user-select: none;
   outline: none;
 }
 
 summary:hover {
-  color: #000;
-  background-color: #ffc800;
-  border-radius: 15px;
   width: fit-content;
+  color: #000;
+  border-radius: 15px;
+  background-color: #ffc800;
 }
 
 summary::-webkit-details-marker {
@@ -120,35 +120,35 @@ details[open] summary {
   margin-bottom: 8px;
 }
 
-ul.tree-view ul>li:last-child:after {
+ul.tree-view ul > li:last-child:after {
   background-color: #000;
 }
 
 // tree a tag style
 ul.tree-view a {
-  padding: 0 10px 0 5px;
-  margin-left: -5px;
-  color: #fff;
   position: relative;
+  margin-left: -5px;
+  padding: 0 10px 0 5px;
   text-decoration: none;
+  color: #fff;
 }
 
 ul.tree-view a:hover {
   color: #000;
-  background-color: #ffc800;
   border-radius: 15px;
+  background-color: #ffc800;
   &::after {
-    content: "->";
-    display: block;
-    text-align: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 0 15px 15px 0;
-    color: #000;
-    background-color: #ffc800;
     position: absolute;
     top: 0;
     right: -10px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    content: '->';
+    text-align: center;
+    color: #000;
+    border-radius: 0 15px 15px 0;
+    background-color: #ffc800;
   }
 }
 // list tree customize 98.css -----------------------------------------------

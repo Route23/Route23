@@ -12,9 +12,6 @@ const date = cut_date.substring( 0, 10 );
   <head>
     <MainHead title={content.title} />
     <link rel="stylesheet" href="/markdown.css">
-    <style lang="scss">
-
-    </style>
   </head>
   <body>
     <Nav />
@@ -22,17 +19,15 @@ const date = cut_date.substring( 0, 10 );
       <h1 class="title">{content.title}</h1>
     </header>
     <div class="leadIn">
-      <div class="tags tal flex">
+      <div class="leadIn_tags">
         {content.tags.map((t) => (
-          <span class="tag">{t}</span>
+          <span>{t}</span>
         ))}
-        <div class="date">{date}</div>
+        <div class="leadIn_tags_date">{date}</div>
       </div>
-      <h3 class="tagline">desc : {content.description}</h3>
+      <div class="leadIn_desc">desc : {content.description}</div>
     </div>
-    <div class="pt0">
-      <div class="content"><slot></slot></div>
-    </div>
+    <div class="content"><slot></slot></div>
     <!-- <footer class="tac mt6 mb6">
       <a href="/blog">
         <Button>View More</Button>

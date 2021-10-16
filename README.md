@@ -26,38 +26,8 @@ ETH Address
 ```
 <img src="public/assets/donation-address.png" width="100">
 
-## OSS
-
-## Blog
-## Junction(docs)
-![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) (INACTIVE)
-![#00ff00](https://via.placeholder.com/15/00ff00/fff?text=+) (ACTIVE)
-
-<!--
----table fix---
-option + shift + f
--->
-
-|                            `601`                             | Web        |
-|:------------------------------------------------------------:|:-----------|
-| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) | Frontend   |
-| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) | Vue        |
-| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) | Svelte     |
-| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) | Astro      |
-| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) | Lighthouse |
-| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) | Dotfiles   |
-| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) | Deploy     |
-
-|                            `602`                             | Design          |
-|:------------------------------------------------------------:|:----------------|
-| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) | Reference Sites |
-
-|                            `603`                             | Research            |
-|:------------------------------------------------------------:|:--------------------|
-| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) | Wayfinding Research |
-| ![#ff0000](https://via.placeholder.com/15/ff0000/fff?text=+) | Music Research      |
-
-|                            `604`                             | OSS      |
-|:------------------------------------------------------------:|:---------|
-| ![#00ff00](https://via.placeholder.com/15/00ff00/fff?text=+) | SubwayUI |
-| ![#00ff00](https://via.placeholder.com/15/00ff00/fff?text=+) | gh-ibli  |
+## vscode
+CSScomb(format)
+```
+shift + option + command + F
+```
