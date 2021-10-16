@@ -8,7 +8,7 @@ description: |
   It's a story about a guy who was drinking and wanted to make something.
 tags:
   - SubwayUI
-char: 3,521
+char: 3,631
 ---
 I don't know what I was thinking, but that night after drinking, I suddenly felt the urge to create something.
 Drinking, watching movies, and coding are the main ways I spend my weekends.
@@ -100,4 +100,7 @@ At the end of this article, I summarized the tools I use as follows
 - [Inter Font](https://rsms.me/inter/)
 
 I'll try to keep blogs like this one on a regular basis.
-Thanks for reading to the end!
+Thanks for reading to the end.
+
+PS:
+I'm always looking for contributors, but I don't know if there's anywhere I can touch right now...
