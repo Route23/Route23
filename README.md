@@ -19,15 +19,21 @@ npm install
 npm start
 npm run build
 ```
+Preview Local Projects with Cloudflare Tunnel. ([url](https://developers.cloudflare.com/pages/how-to/preview-with-cloudflare-tunnel))
+```
+brew install cloudflare/cloudflare/cloudflared
+
+cloudflared update
+cloudflared --version
+cloudflared tunnel --url http://localhost:3000
+```
+CSScomb(format)
+```
+shift + option + command + F
+```
 ## Donation
 ETH Address
 ```
 0x1dE4649cf7D9362311F2Ed3caeDAfebd4DB31A6E
 ```
 <img src="public/assets/donation-address.png" width="100">
-
-## vscode
-CSScomb(format)
-```
-shift + option + command + F
-```
