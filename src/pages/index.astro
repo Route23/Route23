@@ -47,6 +47,12 @@ import Nav from '../components/Nav/index.jsx';
     .green {
       background-color: #00933c;
     }
+    .concrete {
+      background-color: #808183;
+    }
+    .red {
+      background-color: #EE352E;
+    }
     .icon {
       width: 64px;
       font-size: 44px;
@@ -97,15 +103,18 @@ import Nav from '../components/Nav/index.jsx';
   <body>
     <Nav />
     <main class="wrapper">
+
+      <!-- blog -->
       <a href="/blog" class="top-card">
-        <!-- <p class="top-card-icon"><i class="material-icons icon">drive_file_rename_outline</i></p> -->
         <p class="top-card-icon"><i class="material-icons icon bold">arrow_forward</i></p>
-        <!-- <p class="top-card-text">BLOG</p> -->
         <div class="wrap">
           <p class="top-card-text sub-title">BLOG</p>
           <p class="top-card-text sub-desc">Internal Page</p>
         </div>
       </a>
+      <!-- blog -->
+
+      <!-- docs -->
       <a href="/docs" class="top-card mt2">
         <!-- <p class="top-card-icon"><i class="material-icons icon">folder_open</i></p> -->
         <p class="top-card-icon"><i class="material-icons icon bold">arrow_forward</i></p>
@@ -114,8 +123,35 @@ import Nav from '../components/Nav/index.jsx';
           <p class="top-card-text sub-desc">Internal Page</p>
         </div>
       </a>
+      <!-- docs -->
+
+      <!-- docs stats -->
+      <a href="/docs/resume" class="top-card mt2">
+        <!-- <p class="top-card-icon"><i class="material-icons icon">folder_open</i></p> -->
+        <p class="top-card-icon white concrete"><i class="material-icons icon bold">south_east</i></p>
+        <p class="top-card-icon white concrete"><i class="material-icons icon">military_tech</i></p>
+        <div class="wrap">
+          <p class="top-card-text sub-title">Stats</p>
+          <p class="top-card-text sub-desc">Internal Page</p>
+        </div>
+      </a>
+      <!-- docs stats -->
+
+      <!-- docs resume -->
+      <a href="/docs/resume" class="top-card mt2">
+        <!-- <p class="top-card-icon"><i class="material-icons icon">folder_open</i></p> -->
+        <p class="top-card-icon white red"><i class="material-icons icon bold">south_east</i></p>
+        <p class="top-card-icon white red"><i class="material-icons icon">history_edu</i></p>
+        <div class="wrap">
+          <p class="top-card-text sub-title">Resume</p>
+          <p class="top-card-text sub-desc">Internal Page</p>
+        </div>
+      </a>
+      <!-- docs resume -->
+
+      <!-- github -->
       <a href="https://github.com/Coordinate-Cat" class="top-card mt2">
-        <p class="top-card-icon white green"><i class="material-icons icon bold">south_east</i></p>
+        <p class="top-card-icon white green"><i class="material-icons icon bold">arrow_back</i></p>
         <p class="top-card-icon white green">
           <svg class="github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
@@ -126,14 +162,19 @@ import Nav from '../components/Nav/index.jsx';
           <p class="top-card-text sub-desc">External Page</p>
         </div>
       </a>
+      <!-- github -->
+
+      <!-- SubwayUI -->
       <a href="https://github.com/Route23/SubwayUI" class="top-card mt2">
-        <p class="top-card-icon white green"><i class="material-icons icon bold">south_east</i></p>
+        <p class="top-card-icon white green"><i class="material-icons icon bold">arrow_back</i></p>
         <p class="top-card-icon white green"><i class="material-icons icon">subway</i></p>
         <div class="wrap">
           <p class="top-card-text sub-title">SubwayUI<i class="material-icons bold external">open_in_new</i></p>
           <p class="top-card-text sub-desc">External Page</p>
         </div>
       </a>
+      <!-- SubwayUI -->
+
     </main>
   </body>
 </html>
