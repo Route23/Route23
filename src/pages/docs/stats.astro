@@ -1,0 +1,99 @@
+---
+import { Markdown } from 'astro/components';
+
+import MainHead from '../../components/MainHead.astro';
+---
+
+<html lang="en">
+<head>
+  <MainHead title="Resume" />
+</head>
+<style>
+  body {
+    margin: 0 auto;
+  }
+  .wrapper {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  h1 #resume {
+    margin-top: 0 !important;
+  }
+  @media screen and (max-width: 450px) {
+    :global(body) {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 451px) {
+    :global(body) {
+      width: 70%;
+    }
+  }
+  :global(h1) {
+    margin: 0;
+  }
+  :global(h3) {
+    margin-bottom: 0;
+  }
+  :global(p) {
+    margin: 0;
+  }
+  :global(a) {
+    color: #ffc800;
+  }
+  :global(blockquote) {
+    margin: 0;
+    color: #bbb;
+  }
+  :global(hr) {
+    margin-top: 18px !important;
+    color: #bbb;
+  }
+  :global(span > p) {
+  /* // margin-left: 0.5em; */
+    display: inline-block;
+    margin-right: 0.5em;
+    padding: 0 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    width: fit-content;
+    background-color: #fff;
+    color: #000;
+  }
+</style>
+<body>
+<!-- <Nav /> -->
+<div class="wrapper">
+<!-- Astro’s Markdown Component -->
+<Markdown>
+# Stats
+
+## **MUSIC**
+
+### Spotify
+> 2018
+
+> 2019
+
+> 2020
+
+> 2021
+
+## **GAME**
+> PC
+
+> PS4
+
+> Switch
+
+</Markdown>
+<!-- Astro’s Markdown Component -->
+</div>
+</body>
+</html>

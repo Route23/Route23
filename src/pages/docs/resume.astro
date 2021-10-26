@@ -17,6 +17,8 @@ import MainHead from '../../components/MainHead.astro';
     max-width: 750px;
     margin: 0 auto;
     margin-bottom: 30px;
+    padding: 20px;
+    box-sizing: border-box;
   }
   h1 #resume {
     margin-top: 0 !important;
@@ -33,6 +35,10 @@ import MainHead from '../../components/MainHead.astro';
   }
   :global(h1) {
     margin: 0;
+  }
+  :global(h2) {
+    color: #000;
+    background-color: #fff;
   }
   :global(h3) {
     margin-bottom: 0;
@@ -51,19 +57,6 @@ import MainHead from '../../components/MainHead.astro';
     margin-top: 18px !important;
     color: #bbb;
   }
-  :global(span > p) {
-  /* // margin-left: 0.5em; */
-    display: inline-block;
-    margin-right: 0.5em;
-    padding: 0 8px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 600;
-    width: fit-content;
-    background-color: #fff;
-    color: #000;
-  }
 </style>
 <body>
 <!-- <Nav /> -->
@@ -72,14 +65,14 @@ import MainHead from '../../components/MainHead.astro';
 <Markdown>
 # KOKI OKA
 
----
+## **PERSONAL DETAILS**
 
-Tokyo, Japan  
-090-9167-1690  
-tetrapasta02@gmail.com  
-https://route23.pages.dev/  
-
----
+### Date of Birth
+-- June 23, 1997
+### Nationality
+-- Japanese
+### Martial Status
+-- Single
 
 ## **WORK EXPERIENCE**
 
@@ -88,47 +81,38 @@ System Engineer / Frontend Engineer
 
 ### Programming learning service(Start up)
 > April 2020 -- December 2020
-
-> (HTML5, CSS3, JavaScript, Vue.js, Webpack, ESLint, Jest, AdobeXD, Github, Trello)
-
-*A service that allows users to buy and sell programming learning content without the need for environment development.I was mainly responsible for static coding of all administration and user screens, validation of payment screens, and implementation of component UI using Atomic Design. I also introduced and implemented unit tests using Jest almost entirely on my own.It was a great project that I was assigned to as a new graduate and it gave me a lot of experience.*
+*A service that allows users to buy and sell programming learning content without the need for environment development.I was mainly responsible for static coding of all administration and user screens, validation of payment screens, and implementation of component UI using Atomic Design. I also introduced and implemented unit tests using Jest almost entirely on my own.It was a great project that I was assigned to as a new graduate and it gave me a lot of experience.*  
+(HTML5, CSS3, JavaScript, Vue.js, Webpack, ESLint, Jest, AdobeXD, Github, Trello)
 
 ---
 
 ### Creation of a new business website for a major telecommunications company
 > January 2021
-
-> (HTML5, CSS3, JavaScript, Handlebar.js, jQuely, AdobeXD, Github)
-
-*Created a website to announce a new project for a major telecommunications company.The main tasks were to create new pages, fix bugs, and modify processing.*
+*Created a website to announce a new project for a major telecommunications company.The main tasks were to create new pages, fix bugs, and modify processing.*  
+(HTML5, CSS3, JavaScript, Handlebar.js, jQuely, AdobeXD, Github)
 
 ---
 
 ### Maintenance and operation of a major recruiting service
 > February 2021 -- March 2021
-
 *Due to confidentiality agreements, I can't give you any details.*
 
 ---
 
 ### Store terminal application development for a major cosmetics manufacturer
 > April 2021 -- Current
+*In this project, developed an application to manage customer information in a store.My main task was to create screens, connect APIs, and test them with the latest front-end technologies.*  
+(Pug, Stylus, JavaScript, Vue.js, Nuxt.js, AdobeXD, Github, Backlog)
 
-> (Pug, Stylus, JavaScript, Vue.js, Nuxt.js, AdobeXD, Github, Backlog)
-
-*In this project, developed an application to manage customer information in a store.My main task was to create screens, connect APIs, and test them with the latest front-end technologies.*
-
----
 
 ## **TERTIARY**
 
 ### KINDAI University at Osaka
 > 2016 -- 2020
-
 *B.A. in Public Management of Economics.*
 
 <!-- [Kindai news pr](https://www.kindai.ac.jp/news-pr/news-release/2018/06/012872.html) -->
----
+
 
 ## SECONDARY
 
@@ -139,14 +123,15 @@ System Engineer / Frontend Engineer
 
 [result](https://www.jaaf.or.jp/taikai/1292/1292_file_1.pdf)
 
----
 
-## LINKS
-
+## CONTACT
+Tokyo, Japan  
+090-9167-1690  
+Email:tetrapasta02@gmail.com  
 Github:[Coordinate-Cat](https://github.com/Coordinate-Cat)  
 Twitter:[ito_okash1](https://twitter.com/ito_okash1)
 
----
+<!-- ---
 
 ## INTEREST (in something)
 
@@ -154,7 +139,12 @@ Twitter:[ito_okash1](https://twitter.com/ito_okash1)
 <span>Svelte</span>
 <span>OS</span>
 <span>OSS</span>
-<span>UI/UX Design</span>
+<span>UI/UX Design</span> -->
+---
+Would you like to know more?
+<a href="/docs/stats">
+  View More(Stats page)
+</a>
 
 </Markdown>
 <!-- Astro’s Markdown Component -->
