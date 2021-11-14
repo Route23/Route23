@@ -36,7 +36,14 @@ import MainHead from '../../components/MainHead.astro';
   :global(h1) {
     margin: 0;
   }
+  :global(h2) {
+    color: #000;
+    background-color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   :global(h3) {
+    margin-top: 0;
     margin-bottom: 0;
   }
   :global(p) {
@@ -50,8 +57,10 @@ import MainHead from '../../components/MainHead.astro';
     color: #bbb;
   }
   :global(hr) {
-    margin-top: 18px !important;
-    color: #bbb;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    color: #fff;
+    border-style:solid;
   }
   :global(span > p) {
   /* // margin-left: 0.5em; */
@@ -66,31 +75,439 @@ import MainHead from '../../components/MainHead.astro';
     background-color: #fff;
     color: #000;
   }
+  .music {
+    border: 2px solid #fff;
+    margin-bottom: 20px;
+  }
+  .genre {
+    padding: 5px;
+  }
+  .genre > p {
+    font-weight: 600;
+  }
+
+  /* bar design */
+  .bar-holder {
+    width: 100%;
+    background-color: #000;
+    margin: 0 auto;
+    height: 16px;
+  }
+  .bar {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    height: 16px;
+    text-align: right;
+    line-height: 1.4em;
+  }
+  .bar > p {
+    margin-right: 4px;
+  }
+  .bar-1 {
+    background-color: #0039A6;
+    width: 100%;
+  }
+  .bar-2 {
+    background-color: #FF6319;
+    width: 90%;
+  }
+  .bar-3 {
+    background-color: #6CBE45;
+    width: 80%;
+  }
+  .bar-4 {
+    background-color: #996633;
+    width: 78%;
+  }
+  .bar-5 {
+    background-color: #A7A9AC;
+    width: 70%;
+  }
+  .bar-6 {
+    background-color: #FCCC0A;
+    color: #000;
+    width: 68%;
+  }
+  .bar-7 {
+    background-color: #808183;
+    width: 66%;
+  }
+  .bar-8 {
+    background-color: #EE352E;
+    width: 61%;
+  }
+  .bar-9 {
+    background-color: #00933C;
+    width: 58%;
+  }
+  .bar-10 {
+    background-color: #B933AD;
+    width: 56%;
+  }
+  /* bar design */
+
+  /* artists */
+  .artist {
+    padding: 5px;
+  }
+  .rank {
+    display: flex;
+    margin-top: 4px;
+  }
+  .rank > p {
+    margin-left: 4px;
+    font-weight: 600;
+    height: 16px;
+    line-height: 1em;
+  }
+  .rank-num {
+    width: 16px;
+    height: 16px;
+    line-height: 1em;
+    text-align: center;
+    border-radius: 100%;
+    background-color: #ffc800;
+    font-weight: 600;
+    color: #000;
+  }
+  /* artists */
+
+  /* playlists */
+  .playlists {
+    padding: 5px;
+  }
+  .playlists > p {
+    font-weight: 600;
+  }
+  /* playlists */
+
+  /* tracks */
+  .tracks {
+    padding: 5px;
+  }
+  .tracks-holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .tracks-holder-rank {
+    display: flex;
+    margin-top: 4px;
+  }
+  .tracks-holder-rank > div {
+    line-height: 20px;
+  }
+  .tracks-holder-rank > img {
+    width: 60px;
+    max-height: 60px;
+  }
+  .tracks-holder-rank-num {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    background-color: #ffc800;
+    font-weight: 600;
+    line-height: 1em !important;
+    color: #000;
+  }
+  .tracks-holder-rank-name {
+    font-weight: 600;
+    line-height: 1em;
+    margin: auto;
+    margin-left: 5px;
+  }
+  .tracks-holder-rank-name-artist {
+    color: #7C7C7C;
+  }
+  @media screen and (max-width: 480px) {
+    .tracks-holder {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .tracks-holder-rank-name {
+      font-size: 14px;
+    }
+  }
+  .ten {
+    font-size: 12px;
+    line-height: 1.4em !important;
+    font-weight: 800;
+  }
+  /* tracks */
 </style>
 <body>
 <!-- <Nav /> -->
 <div class="wrapper">
 <!-- Astro’s Markdown Component -->
 <Markdown>
+
 # Stats
 
-## **MUSIC**
+<!-- music -->
+<div class="music">
+## **MUSIC (Spotify Stats)**
 
-### Spotify
-> 2018
+<div class="genre">
+### Top Genres(all time)
+  <p>Rock</p>
+  <div class="bar-holder">
+    <div class="bar bar-1"><p>439</p></div>
+  </div>
+  <p>J-Rock</p>
+  <div class="bar-holder">
+    <div class="bar bar-2"><p>376</p></div>
+  </div>
+  <p>J-Pop</p>
+  <div class="bar-holder">
+    <div class="bar bar-3"><p>329</p></div>
+  </div>
+  <p>Modern Rock</p>
+  <div class="bar-holder">
+    <div class="bar bar-4"><p>315</p></div>
+  </div>
+  <p>Modern Alternative Rock</p>
+  <div class="bar-holder">
+    <div class="bar bar-5"><p>242</p></div>
+  </div>
+  <p>Permanent Wave</p>
+  <div class="bar-holder">
+    <div class="bar bar-6"><p>234</p></div>
+  </div>
+  <p>Indie Pop</p>
+  <div class="bar-holder">
+    <div class="bar bar-7"><p>222</p></div>
+  </div>
+  <p>J-PopRock</p>
+  <div class="bar-holder">
+    <div class="bar bar-8"><p>165</p></div>
+  </div>
+  <p>Pop</p>
+  <div class="bar-holder">
+    <div class="bar bar-9"><p>139</p></div>
+  </div>
+  <p>Japanese Alternative Rock</p>
+  <div class="bar-holder">
+    <div class="bar bar-10"><p>124</p></div>
+  </div>
+</div>
 
-> 2019
+<hr>
 
-> 2020
+<div class="artist">
+### Top Artists(all time)
 
-> 2021
+    <div class="tracks-holder">
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">1</div>
+      <img src="/assets/artists/artists-1.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>The 1975</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">2</div>
+      <img src="/assets/artists/artists-2.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Vistas</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">3</div>
+      <img src="/assets/artists/artists-3.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Radiohead</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">4</div>
+      <img src="/assets/artists/artists-4.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Tokyo Incident</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">5</div>
+      <img src="/assets/artists/artists-5.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Beach Bunny</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">6</div>
+      <img src="/assets/artists/artists-6.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Two Door Cinema Club</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">7</div>
+      <img src="/assets/artists/artists-7.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Hitsujibungaku</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">8</div>
+      <img src="/assets/artists/artists-8.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Elvis Presley</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">9</div>
+      <img src="/assets/artists/artists-9.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>The Killers</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num ten">10</div>
+      <img src="/assets/artists/artists-10.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>No Buses</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-## **GAME**
+<hr>
+
+<div class="tracks">
+### Top tracks(all time)
+
+  <div class="tracks-holder">
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">1</div>
+      <img src="/assets/tracks/tracks-1.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>1234</div>
+        <div class="tracks-holder-rank-name-artist">/Feist</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">2</div>
+      <img src="/assets/tracks/tracks-2.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Girl</div>
+        <div class="tracks-holder-rank-name-artist">/No Buses</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">3</div>
+      <img src="/assets/tracks/tracks-3.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Sincerity Is Scary</div>
+        <div class="tracks-holder-rank-name-artist">/The 1975</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">4</div>
+      <img src="/assets/tracks/tracks-4.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>What You Know</div>
+        <div class="tracks-holder-rank-name-artist">/Two Door Cinema Club</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">5</div>
+      <img src="/assets/tracks/tracks-5.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Aimaideiiyo</div>
+        <div class="tracks-holder-rank-name-artist">/Hitsujibungaku</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">6</div>
+      <img src="/assets/tracks/tracks-6.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Soda</div>
+        <div class="tracks-holder-rank-name-artist">/The Whoops</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">7</div>
+      <img src="/assets/tracks/tracks-7.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Painkiller</div>
+        <div class="tracks-holder-rank-name-artist">/Beach Bunny</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">8</div>
+      <img src="/assets/tracks/tracks-8.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Lift</div>
+        <div class="tracks-holder-rank-name-artist">/Radiohead</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num">9</div>
+      <img src="/assets/tracks/tracks-9.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Brianstrom</div>
+        <div class="tracks-holder-rank-name-artist">/Arctic Monkeys</div>
+      </div>
+    </div>
+    <div class="tracks-holder-rank">
+      <div class="tracks-holder-rank-num ten">10</div>
+      <img src="/assets/tracks/tracks-10.jpeg" alt="">
+      <div class="tracks-holder-rank-name">
+        <div>Silhouettes</div>
+        <div class="tracks-holder-rank-name-artist">/Colony house</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="playlists">
+### Playlists
+  <p>Your Top Songs 2020</p>
+  <iframe
+    src="https://open.spotify.com/embed/playlist/37i9dQZF1EM4QpTmLOsGxa?utm_source=generator&theme=0"
+    width="100%"
+    height="80"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+  <p>Your Top Songs 2019</p>
+  <iframe
+    src="https://open.spotify.com/embed/playlist/37i9dQZF1EtnBBAGMqLycU?utm_source=generator&theme=0"
+    width="100%"
+    height="80"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+  <p>Your Top Songs 2018</p>
+  <iframe
+    src="https://open.spotify.com/embed/playlist/37i9dQZF1EjnJldLdrpH4Z?utm_source=generator&theme=0"
+    width="100%"
+    height="80"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+</div>
+
+</div>
+
+<div class="game">
+<!-- ## **GAME**
+
 > PC
 
 > PS4
+- Apex Legends
+- Last of us
+- Last of us 2
 
-> Switch
+> Switch -->
+
+</div>
+
+<div class="github">
+</div>
 
 </Markdown>
 <!-- Astro’s Markdown Component -->
