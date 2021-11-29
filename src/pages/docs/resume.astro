@@ -20,12 +20,31 @@ import MainHead from '../../components/MainHead.astro';
     padding: 20px;
     box-sizing: border-box;
   }
+  .flex {
+    display: flex;
+  }
+  .profile_img {
+    width: 150px;
+    height: 100%;
+    position: relative;
+  }
+  .vertical {
+    margin-left: 20px;
+  }
   h1 #resume {
     margin-top: 0 !important;
   }
   @media screen and (max-width: 450px) {
     :global(body) {
       width: 100%;
+    }
+    .profile_img {
+      width: 150px;
+      height: 100%;
+      position: relative;
+    }
+    .vertical {
+      margin-left: 20px;
     }
   }
   @media screen and (min-width: 451px) {
@@ -41,6 +60,7 @@ import MainHead from '../../components/MainHead.astro';
     background-color: #fff;
   }
   :global(h3) {
+    margin-top: 0;
     margin-bottom: 0;
   }
   :global(p) {
@@ -67,12 +87,18 @@ import MainHead from '../../components/MainHead.astro';
 
 ## **PERSONAL DETAILS**
 
-### Date of Birth
--- June 23, 1997
-### Nationality
--- Japanese
-### Martial Status
--- Single
+<div class="flex">
+  <img src="/assets/resume/me.jpeg" alt="" class="profile_img">
+  <div class="vertical">
+  ### Date of Birth
+  -- June 23, 1997
+  ### Nationality
+  -- Japanese
+  ### Martial Status
+  -- Single
+  </div>
+</div>
+
 
 ## **WORK EXPERIENCE**
 

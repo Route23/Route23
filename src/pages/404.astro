@@ -1,20 +1,79 @@
 ---
+// Component Imports
 import MainHead from '../components/MainHead.astro';
-import Footer from '../components/Footer/index.jsx';
-import Nav from '../components/Nav/index.jsx';
-
 ---
-
 <html lang="en">
   <head>
-    <MainHead title="Not Found" />
+    <MainHead title="Onion" />
+    <style lang="scss">
+      :global(html) {
+        background-color: blue !important;
+      }
+      :global(body) {
+        color: #fff;
+        background-color: blue !important;
+      }
+      :global(a) {
+        color: #fff;
+      }
+      .text {
+        font-family: 'VT323', monospace;
+        margin: 20px 0;
+      }
+      .dev {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        overflow : hidden;
+      }
+    </style>
   </head>
   <body>
-    <Nav />
-    <div class="wrapper mt4 mb4">
-      <h1>Page Not Found</h1>
-      <p>Not found</p>
+    <div class="dev">
+      <h1 class="text">404</h1>
+      <div class="text">
+      A problem has been detected and windows has been shut down to prevent damage
+      to your computer.
+      </div>
+
+      <div class="text">
+      REGISTRY_ERROR
+      </div>
+
+      <div class="text">
+      If this is the first time you've seen this stop error screen,
+      restart your computer. If this screen appears again, follow
+      these steps:
+      </div>
+
+      <div class="text">
+      Check to make sure any new hardware or software is properly installed.<br>
+      If this is a new installation, ask your hardware or software manufacturer
+      for any windows updates you might need.
+      </div>
+
+      <div class="text">
+      If problems continue, disable or remove any newly installed hardware
+      or software. Disable BIOS memory options such as caching or shadowing.<br>
+      If you need to use Safe mode to remove or disable components,restart
+      your computer, press F8 to select Advanced Startup Options, and then
+      select Safe mode.
+      </div>
+
+      <div class="text">
+      Technical information:
+      </div>
+
+      <div class="text">
+      STOP: 0x00000051 <br>(0x00000001,0xE2F74B60,0x00ED4000,0x000001D6)
+      </div>
+
+      <a href="/" class="text">
+      > exit
+      </a>
     </div>
-    <Footer />
   </body>
 </html>

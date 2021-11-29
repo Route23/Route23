@@ -1,516 +1,435 @@
 ---
-import { Markdown } from 'astro/components';
-
 import MainHead from '../../components/MainHead.astro';
+
+const genres = [
+  {name: "Rock",                      stat: 439},
+  {name: "J-Rock",                    stat: 376},
+  {name: "J-Pop",                     stat: 329},
+  {name: "Modern Rock",               stat: 315},
+  {name: "Modern Alternative Rock",   stat: 242},
+  {name: "Permanent Wave",            stat: 234},
+  {name: "Indie Pop",                 stat: 222},
+  {name: "J-PopRock",                 stat: 165},
+  {name: "Pop",                       stat: 139},
+  {name: "Japanese Alternative Rock", stat: 124},
+];
+
+const artists = [
+  "The 1975",
+  "Vistas",
+  "Radiohead",
+  "Tokyo Incident",
+  "Beach Bunny",
+  "Two Door Cinema Club",
+  "Hitsujibungaku",
+  "Elvis Presley",
+  "The Killers",
+  "No Buses",
+];
+
+const tracks = [
+  {name: "1234",               artist: "/Feist"},
+  {name: "Girl",               artist: "/No Buses"},
+  {name: "Sincerity Is Scary", artist: "/The 1975"},
+  {name: "What You Know",      artist: "/Two Door Cinema Club"},
+  {name: "Aimaideiiyo",        artist: "/Hitsujibungaku"},
+  {name: "Soda",               artist: "/The Whoops"},
+  {name: "Painkiller",         artist: "/Beach Bunny"},
+  {name: "Lift",               artist: "/Radiohead"},
+  {name: "Brianstorm",         artist: "/Arctic Monkeys"},
+  {name: "Silhouettes",        artist: "/Colony house"},
+];
+
+const playlists = [
+  {name: "Your Top Songs 2020", url: "37i9dQZF1EM4QpTmLOsGxa"},
+  {name: "Your Top Songs 2019", url: "37i9dQZF1EtnBBAGMqLycU"},
+  {name: "Your Top Songs 2018", url: "37i9dQZF1EjnJldLdrpH4Z"},
+]
 ---
 
 <html lang="en">
 <head>
-  <MainHead title="Resume" />
+  <MainHead title="Stats" />
 </head>
-<style>
-  body {
-    margin: 0 auto;
-  }
-  .wrapper {
-    width: 100%;
-    max-width: 750px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  h1 #resume {
-    margin-top: 0 !important;
-  }
-  @media screen and (max-width: 450px) {
-    :global(body) {
+<style lang="scss">
+  /* overall */
+    body {
+      margin: 0 auto;
+    }
+    .wrapper {
       width: 100%;
+      max-width: 750px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      padding: 20px;
+      box-sizing: border-box;
     }
-  }
-  @media screen and (min-width: 451px) {
-    :global(body) {
-      width: 70%;
+    .music {
+      border: 2px solid #fff;
+      margin-bottom: 20px;
     }
-  }
-  :global(h1) {
-    margin: 0;
-  }
-  :global(h2) {
-    color: #000;
-    background-color: #fff;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  :global(h3) {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  :global(p) {
-    margin: 0;
-  }
-  :global(a) {
-    color: #ffc800;
-  }
-  :global(blockquote) {
-    margin: 0;
-    color: #bbb;
-  }
-  :global(hr) {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-    color: #fff;
-    border-style:solid;
-  }
-  :global(span > p) {
-  /* // margin-left: 0.5em; */
-    display: inline-block;
-    margin-right: 0.5em;
-    padding: 0 8px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 600;
-    width: fit-content;
-    background-color: #fff;
-    color: #000;
-  }
-  .music {
-    border: 2px solid #fff;
-    margin-bottom: 20px;
-  }
-  .genre {
-    padding: 5px;
-  }
-  .genre > p {
-    font-weight: 600;
-  }
+    h1 #resume {
+      margin-top: 0 !important;
+    }
+    @media screen and (max-width: 450px) {
+      :global(body) {
+        width: 100%;
+      }
+    }
+    @media screen and (min-width: 451px) {
+      :global(body) {
+        width: 70%;
+      }
+    }
+  /* overall end */
 
-  /* bar design */
-  .bar-holder {
-    width: 100%;
-    background-color: #000;
-    margin: 0 auto;
-    height: 16px;
-  }
-  .bar {
-    color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-    height: 16px;
-    text-align: right;
-    line-height: 1.4em;
-  }
-  .bar > p {
-    margin-right: 4px;
-  }
-  .bar-1 {
-    background-color: #0039A6;
-    width: 100%;
-  }
-  .bar-2 {
-    background-color: #FF6319;
-    width: 90%;
-  }
-  .bar-3 {
-    background-color: #6CBE45;
-    width: 80%;
-  }
-  .bar-4 {
-    background-color: #996633;
-    width: 78%;
-  }
-  .bar-5 {
-    background-color: #A7A9AC;
-    width: 70%;
-  }
-  .bar-6 {
-    background-color: #FCCC0A;
-    color: #000;
-    width: 68%;
-  }
-  .bar-7 {
-    background-color: #808183;
-    width: 66%;
-  }
-  .bar-8 {
-    background-color: #EE352E;
-    width: 61%;
-  }
-  .bar-9 {
-    background-color: #00933C;
-    width: 58%;
-  }
-  .bar-10 {
-    background-color: #B933AD;
-    width: 56%;
-  }
-  /* bar design */
+  /* global */
+    :global(h1) {
+      margin: 0;
+    }
+    :global(h2) {
+      color: #000;
+      background-color: #fff;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    :global(h3) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    :global(p) {
+      margin: 0;
+    }
+    :global(li) {
+      font-weight: 600;
+      list-style: none;
+    }
+    :global(a) {
+      color: #ffc800;
+    }
+    :global(blockquote) {
+      margin: 0;
+      color: #bbb;
+    }
+    :global(hr) {
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+      color: #fff;
+      border-style:solid;
+    }
+    :global(span > p) {
+      /* // margin-left: 0.5em; */
+      display: inline-block;
+      margin-right: 0.5em;
+      padding: 0 8px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
+      width: fit-content;
+      background-color: #fff;
+      color: #000;
+    }
+  /* global end */
+
+  /* genre */
+    .genre {
+      padding: 5px;
+      &-holder {
+        width: 100%;
+        background-color: #000;
+        margin: 0 auto;
+        height: 16px;
+      }
+      > p {
+        font-weight: 600;
+      }
+    }
+    .bar {
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      height: 16px;
+      text-align: right;
+      line-height: 1.4em;
+      > p {
+        margin-right: 4px;
+      }
+      &-1 {
+        background-color: #0039A6;
+        width: 100%;
+      }
+      &-2 {
+        background-color: #FF6319;
+        width: 90%;
+      }
+      &-3 {
+        background-color: #6CBE45;
+        width: 80%;
+      }
+      &-4 {
+        background-color: #996633;
+        width: 78%;
+      }
+      &-5 {
+        background-color: #A7A9AC;
+        width: 70%;
+      }
+      &-6 {
+        background-color: #FCCC0A;
+        color: #000;
+        width: 68%;
+      }
+      &-7 {
+        background-color: #808183;
+        width: 66%;
+      }
+      &-8 {
+        background-color: #EE352E;
+        width: 61%;
+      }
+      &-9 {
+        background-color: #00933C;
+        width: 58%;
+      }
+      &-10 {
+        background-color: #B933AD;
+        width: 56%;
+      }
+    }
+  /* genre end */
 
   /* artists */
-  .artist {
-    padding: 5px;
-  }
-  .rank {
-    display: flex;
-    margin-top: 4px;
-  }
-  .rank > p {
-    margin-left: 4px;
-    font-weight: 600;
-    height: 16px;
-    line-height: 1em;
-  }
-  .rank-num {
-    width: 16px;
-    height: 16px;
-    line-height: 1em;
-    text-align: center;
-    border-radius: 100%;
-    background-color: #ffc800;
-    font-weight: 600;
-    color: #000;
-  }
-  /* artists */
-
-  /* playlists */
-  .playlists {
-    padding: 5px;
-  }
-  .playlists > p {
-    font-weight: 600;
-  }
-  /* playlists */
+    .artists {
+      padding: 5px;
+      &-holder {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        &-rank {
+          display: flex;
+          margin-top: 4px;
+          > div {
+            line-height: 20px;
+          }
+          > img {
+            width: 60px;
+            max-height: 60px;
+          }
+          &-num {
+            position: absolute;
+            width: min-content;
+            min-width: 16px;
+            height: 16px;
+            text-align: center;
+            background-color: #ffc800;
+            font-weight: 600;
+            line-height: 1em !important;
+            color: #000;
+          }
+          &-name {
+            font-weight: 600;
+            line-height: 1em;
+            margin: auto;
+            margin-left: 5px;
+            &-artist {
+              color: #7C7C7C;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .artists-holder {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        &-rank-name {
+          font-size: 12px;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .artists-holder {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        &-rank-name {
+          font-size: 12px;
+        }
+      }
+    }
+  /* artists end */
 
   /* tracks */
-  .tracks {
-    padding: 5px;
-  }
-  .tracks-holder {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .tracks-holder-rank {
-    display: flex;
-    margin-top: 4px;
-  }
-  .tracks-holder-rank > div {
-    line-height: 20px;
-  }
-  .tracks-holder-rank > img {
-    width: 60px;
-    max-height: 60px;
-  }
-  .tracks-holder-rank-num {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    text-align: center;
-    background-color: #ffc800;
-    font-weight: 600;
-    line-height: 1em !important;
-    color: #000;
-  }
-  .tracks-holder-rank-name {
-    font-weight: 600;
-    line-height: 1em;
-    margin: auto;
-    margin-left: 5px;
-  }
-  .tracks-holder-rank-name-artist {
-    color: #7C7C7C;
-  }
-  @media screen and (max-width: 480px) {
-    .tracks-holder {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    .tracks {
+      padding: 5px;
+      &-holder {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        &-rank {
+          display: flex;
+          margin-top: 4px;
+          > div {
+            line-height: 20px;
+          }
+          > img {
+            width: 60px;
+            max-height: 60px;
+          }
+          &-num {
+            position: absolute;
+            width: min-content;
+            min-width: 16px;
+            height: 16px;
+            text-align: center;
+            background-color: #ffc800;
+            font-weight: 600;
+            line-height: 1em !important;
+            color: #000;
+          }
+          &-name {
+            font-weight: 600;
+            line-height: 1em;
+            margin: auto;
+            margin-left: 5px;
+            &-artist {
+              color: #7C7C7C;
+            }
+          }
+        }
+      }
     }
-    .tracks-holder-rank-name {
-      font-size: 14px;
+    @media screen and (max-width: 480px) {
+      .tracks-holder {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        &-rank-name {
+          font-size: 14px;
+          &-artist {
+            font-size: 12px;
+            line-height: 1.1em;
+          }
+        }
+      }
     }
-  }
-  .ten {
-    font-size: 12px;
-    line-height: 1.4em !important;
-    font-weight: 800;
-  }
-  /* tracks */
+    @media screen and (max-width: 768px) {
+      .tracks-holder-rank-name-artist {
+        font-size: 12px;
+        line-height: 1.1em;
+      }
+    }
+    .ten {
+      font-size: 12px;
+      line-height: 1.4em !important;
+      font-weight: 800;
+    }
+  /* tracks end */
+
+  /* playlists */
+    .playlists {
+      padding: 5px;
+      > p {
+        font-weight: 600;
+      }
+    }
+  /* playlists end */
 </style>
 <body>
-<!-- <Nav /> -->
 <div class="wrapper">
-<!-- Astro’s Markdown Component -->
-<Markdown>
+<h1>Stats</h1>
 
-# Stats
+  <!-- music -->
+  <div class="music">
+  <h2>MUSIC (Spotify Stats)</h2>
 
-<!-- music -->
-<div class="music">
-## **MUSIC (Spotify Stats)**
+    <!-- genre -->
+    <div class="genre">
+      <h3>Top Genres(all time)</h3>
+      {genres.map((genre, i) => (
+        <li>
+          {genre.name}
+          <div class="genre-holder">
+            <div class={"bar" + " " + "bar-" + `${i+1}`}>
+              {genre.stat}
+            </div>
+          </div>
+        </li>
+      ))}
+    </div>
+    <!-- genre end -->
 
-<div class="genre">
-### Top Genres(all time)
-  <p>Rock</p>
-  <div class="bar-holder">
-    <div class="bar bar-1"><p>439</p></div>
+    <hr>
+
+    <!-- artist -->
+    <div class="artists">
+      <h3>Top Artists(all time)</h3>
+
+      <div class="artists-holder">
+        {artists.map((artist, i) => (
+          <li class="artists-holder-rank">
+            <div class="artists-holder-rank-num">
+              {i+1}
+            </div>
+            <img src={"/assets/artists/artists-" + `${i+1}` + ".jpeg"} alt="artist image">
+            <div class="artists-holder-rank-name">
+              {artist}
+            </div>
+          </li>
+        ))}
+      </div>
+    </div>
+    <!-- artist end -->
+
+    <hr>
+
+    <!-- tracks -->
+    <div class="tracks">
+      <h3>Top tracks(all time)</h3>
+
+      <div class="tracks-holder">
+        {tracks.map((track, i) => (
+          <div class="tracks-holder-rank">
+            <div class="tracks-holder-rank-num">
+              {i+1}
+            </div>
+            <img src={"/assets/tracks/tracks-"+ `${i+1}`+ ".jpeg"} alt="track image">
+            <div class="tracks-holder-rank-name">
+              {track.name}
+              <div class="tracks-holder-rank-name-artist">{track.artist}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+    <!-- tracks end -->
+
+    <hr>
+
+    <!-- Playlists -->
+    <div class="playlists">
+      <h3>Playlists</h3>
+
+      <div class="playlists-holder">
+        {playlists.map(playlist => (
+          <li>
+            <p>{playlist.name}</p>
+            <iframe
+              src={"https://open.spotify.com/embed/playlist/" + `${playlist.url}` + "?utm_source=generator&theme=0"}
+              width="100%"
+              height="80"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </li>
+        ))}
+      </div>
+    </div>
+    <!-- Playlists end -->
+
   </div>
-  <p>J-Rock</p>
-  <div class="bar-holder">
-    <div class="bar bar-2"><p>376</p></div>
-  </div>
-  <p>J-Pop</p>
-  <div class="bar-holder">
-    <div class="bar bar-3"><p>329</p></div>
-  </div>
-  <p>Modern Rock</p>
-  <div class="bar-holder">
-    <div class="bar bar-4"><p>315</p></div>
-  </div>
-  <p>Modern Alternative Rock</p>
-  <div class="bar-holder">
-    <div class="bar bar-5"><p>242</p></div>
-  </div>
-  <p>Permanent Wave</p>
-  <div class="bar-holder">
-    <div class="bar bar-6"><p>234</p></div>
-  </div>
-  <p>Indie Pop</p>
-  <div class="bar-holder">
-    <div class="bar bar-7"><p>222</p></div>
-  </div>
-  <p>J-PopRock</p>
-  <div class="bar-holder">
-    <div class="bar bar-8"><p>165</p></div>
-  </div>
-  <p>Pop</p>
-  <div class="bar-holder">
-    <div class="bar bar-9"><p>139</p></div>
-  </div>
-  <p>Japanese Alternative Rock</p>
-  <div class="bar-holder">
-    <div class="bar bar-10"><p>124</p></div>
-  </div>
-</div>
-
-<hr>
-
-<div class="artist">
-### Top Artists(all time)
-
-    <div class="tracks-holder">
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">1</div>
-      <img src="/assets/artists/artists-1.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>The 1975</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">2</div>
-      <img src="/assets/artists/artists-2.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Vistas</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">3</div>
-      <img src="/assets/artists/artists-3.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Radiohead</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">4</div>
-      <img src="/assets/artists/artists-4.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Tokyo Incident</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">5</div>
-      <img src="/assets/artists/artists-5.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Beach Bunny</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">6</div>
-      <img src="/assets/artists/artists-6.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Two Door Cinema Club</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">7</div>
-      <img src="/assets/artists/artists-7.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Hitsujibungaku</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">8</div>
-      <img src="/assets/artists/artists-8.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Elvis Presley</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">9</div>
-      <img src="/assets/artists/artists-9.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>The Killers</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num ten">10</div>
-      <img src="/assets/artists/artists-10.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>No Buses</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr>
-
-<div class="tracks">
-### Top tracks(all time)
-
-  <div class="tracks-holder">
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">1</div>
-      <img src="/assets/tracks/tracks-1.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>1234</div>
-        <div class="tracks-holder-rank-name-artist">/Feist</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">2</div>
-      <img src="/assets/tracks/tracks-2.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Girl</div>
-        <div class="tracks-holder-rank-name-artist">/No Buses</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">3</div>
-      <img src="/assets/tracks/tracks-3.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Sincerity Is Scary</div>
-        <div class="tracks-holder-rank-name-artist">/The 1975</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">4</div>
-      <img src="/assets/tracks/tracks-4.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>What You Know</div>
-        <div class="tracks-holder-rank-name-artist">/Two Door Cinema Club</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">5</div>
-      <img src="/assets/tracks/tracks-5.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Aimaideiiyo</div>
-        <div class="tracks-holder-rank-name-artist">/Hitsujibungaku</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">6</div>
-      <img src="/assets/tracks/tracks-6.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Soda</div>
-        <div class="tracks-holder-rank-name-artist">/The Whoops</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">7</div>
-      <img src="/assets/tracks/tracks-7.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Painkiller</div>
-        <div class="tracks-holder-rank-name-artist">/Beach Bunny</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">8</div>
-      <img src="/assets/tracks/tracks-8.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Lift</div>
-        <div class="tracks-holder-rank-name-artist">/Radiohead</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num">9</div>
-      <img src="/assets/tracks/tracks-9.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Brianstrom</div>
-        <div class="tracks-holder-rank-name-artist">/Arctic Monkeys</div>
-      </div>
-    </div>
-    <div class="tracks-holder-rank">
-      <div class="tracks-holder-rank-num ten">10</div>
-      <img src="/assets/tracks/tracks-10.jpeg" alt="">
-      <div class="tracks-holder-rank-name">
-        <div>Silhouettes</div>
-        <div class="tracks-holder-rank-name-artist">/Colony house</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr>
-
-<div class="playlists">
-### Playlists
-  <p>Your Top Songs 2020</p>
-  <iframe
-    src="https://open.spotify.com/embed/playlist/37i9dQZF1EM4QpTmLOsGxa?utm_source=generator&theme=0"
-    width="100%"
-    height="80"
-    frameBorder="0"
-    allowfullscreen=""
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-  <p>Your Top Songs 2019</p>
-  <iframe
-    src="https://open.spotify.com/embed/playlist/37i9dQZF1EtnBBAGMqLycU?utm_source=generator&theme=0"
-    width="100%"
-    height="80"
-    frameBorder="0"
-    allowfullscreen=""
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-  <p>Your Top Songs 2018</p>
-  <iframe
-    src="https://open.spotify.com/embed/playlist/37i9dQZF1EjnJldLdrpH4Z?utm_source=generator&theme=0"
-    width="100%"
-    height="80"
-    frameBorder="0"
-    allowfullscreen=""
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-</div>
-
-</div>
-
-<div class="game">
-<!-- ## **GAME**
-
-> PC
-
-> PS4
-- Apex Legends
-- Last of us
-- Last of us 2
-
-> Switch -->
-
-</div>
+  <!-- music end -->
 
 <div class="github">
 </div>
 
-</Markdown>
-<!-- Astro’s Markdown Component -->
 </div>
 </body>
 </html>

@@ -1,0 +1,93 @@
+---
+// Component Imports
+import MainHead from '../../components/MainHead.astro';
+---
+<html lang="en">
+  <head>
+    <MainHead title="Attention" />
+    <style lang="scss">
+      :global(h1) {
+        margin: 0;
+      }
+      :global(p) {
+        margin: 0;
+      }
+      :global(a) {
+        color: #ffc800;
+      }
+      .wrapper {
+        width: 100%;
+        max-width: 750px;
+        margin: 0 auto;
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .attention {
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+      .flex {
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        display: flex;
+      }
+      .back {
+        color: #fff;
+      }
+      .enter {
+        margin-left: 10px;
+      }
+      .material-icons {
+        font-size: 64px;
+        margin: 0;
+        margin-top: 10px;
+        color: #ffc800;
+        // text-shadow: 1px 1px 30px #fff, 1px 1px 12px #fff, 2px 5px 60px #fff;
+        animation: blink 3s infinite alternate;
+      }
+      .quote {
+        margin-top: 20px;
+        color: #bbb;
+      }
+      @keyframes blink {
+        40% {
+          opacity: 1;
+        }
+        42% {
+          opacity: .4;
+        }
+        43% {
+          opacity: 1;
+        }
+        45% {
+          opacity: .4;
+        }
+        46% {
+          opacity: 1;
+        }
+      }
+      .dot {
+        text-decoration: underline;
+        text-decoration-color:#fff;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="attention">
+        <h1>Attention</h1>
+        <p class="material-icons">warning_amber</p>
+        <p class="quote">On the next page, you will find <span class="dot">criminal</span>, <span class="dot">violent</span>, and <span class="dot">nsfw</span> expressions.</p>
+        <div class="flex">
+          <a class="back" href="/">Back</a>
+          <a class="enter" href="/docs/onion">Enter</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
