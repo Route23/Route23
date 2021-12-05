@@ -1,4 +1,11 @@
 // -----------
+// blog-only font family
+// -----------
+.ja {
+  margin-top: 20px;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+// -----------
 // blog-only hyperlinks
 // -----------
 a {
@@ -8,25 +15,30 @@ a {
 // head hero image
 // -----------
 .hero {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 25vw;
-  padding: 8rem;
-  color: white;
-  background-color: var(--t-fg);
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
+  // justify-content: center;
+  // min-height: 25vw;
+  // padding: 8rem;
+  // color: white;
+  // background-color: var(--t-fg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  
   filter: grayscale(100);
 }
 .title {
-  text-align: center;
+  margin-top: 70px;
+  // padding: 0 32px;
+  color: #fff;
+  text-align: left;
   letter-spacing: .0625em;
   text-transform: uppercase;
-  font-size: var(--f-u10);
+  font-size: 24px;
   font-weight: 900;
+  overflow-wrap: break-word;
+	word-break: keep-all;
 }
 // -----------
 // main content
@@ -36,6 +48,7 @@ a {
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
+  margin-bottom: 80px;
   padding: 0 32px;
   color: #fff;
   font-size: var(--f-u1);
@@ -56,14 +69,15 @@ a {
   border: 4px solid #fff;
   border-radius: 10px;
   background-color: #fff;
+
   &_tags {
     display: flex;
     height: 14px;
     margin: 0 auto;
     margin-bottom: 4px;
     & > span {
-      margin-right: .5em;
-      margin-left: .5em;
+      margin-right: .1em;
+      margin-left: .1em;
       padding: 0 8px;
       text-transform: uppercase;
       color: #000;
@@ -85,6 +99,9 @@ a {
       font-size: 12px;
       font-weight: 900;
     }
+  }
+  &_para {
+    display: flex;
   }
   &_desc {
     margin: 0 auto;

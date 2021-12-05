@@ -8,6 +8,7 @@ description: |
   It's a story about a guy who was drinking and wanted to make something.
 tags:
   - SubwayUI
+  - EN
 char: 3,631
 ---
 I don't know what I was thinking, but that night after drinking, I suddenly felt the urge to create something.
@@ -104,3 +105,8 @@ Thanks for reading to the end.
 
 PS:
 I'm always looking for contributors, but I don't know if there's anywhere I can touch right now...
+
+<div class="ja">
+あいうえお
+嗚呼
+</div>

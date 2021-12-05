@@ -15,15 +15,17 @@ const date = cut_date.substring( 0, 10 );
   </head>
   <body>
     <Nav />
-    <header style={`background-image:url(${content.img})`} class="hero">
-      <h1 class="title">{content.title}</h1>
-    </header>
+    <!-- <header style={`background-image:url(${content.img})`} class="hero"> -->
+    <!-- </header> -->
     <div class="content">
+      <h1 class="title">{content.title}</h1>
       <div class="leadIn">
         <div class="leadIn_tags">
           {content.tags.map((t) => (
             <span>{t}</span>
           ))}
+        </div>
+        <div class="leadIn_para">
           <div class="leadIn_tags_date">{date} | </div>
           <div class="leadIn_tags_char">{content.char} chars</div>
         </div>

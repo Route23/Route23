@@ -6,9 +6,33 @@ import MainHead from '../../components/MainHead.astro';
   <head>
     <MainHead title="Onion" />
     <style lang="scss">
-
+      :global(html) {
+        background-color: blue !important;
+      }
+      :global(body) {
+        color: #fff;
+        background-color: blue !important;
+      }
+      .text {
+        font-family: 'VT323', monospace;
+        margin: 20px 0;
+      }
+      .dev {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
     </style>
   </head>
   <body>
+    <div class="dev">
+      <div class="text">
+        
+      </div>
+    </div>
   </body>
 </html>
