@@ -1,0 +1,303 @@
+---
+// Component Imports
+import MainHead from '../../components/MainHead.astro';
+
+let date = new Date();
+latestDate = date.getUTCFullYear()
+  + '/' + ('0' + (date.getUTCMonth() + 1)).slice(-2)
+  + '/' + ('0' + date.getUTCDate()).slice(-2)
+  + ' ' + ('0' + date.getUTCHours()).slice(-2)
+  + ':' + ('0' + date.getUTCMinutes()).slice(-2)
+  + ':' + ('0' + date.getUTCSeconds()).slice(-2)
+  + ':' + ('0' + date.getUTCMilliseconds()).slice(-3)
+  + '(UTC)';
+---
+<html lang="en">
+  <head>
+    <MainHead title="Onion" />
+    <style lang="scss">
+      :global(html) {
+        background-color: #000 !important;
+      }
+      :global(body) {
+        color: #fff;
+        background-color: #000 !important;
+      }
+      :global(h1) {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1em;
+      }
+      :global(h2) {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1em;
+      }
+      :global(p) {
+        margin: 0;
+      }
+      :global(a) {
+        color: #fff;
+      }
+      li {
+        list-style: none;
+        &:before {
+          content: "> ";
+        }
+      }
+      ul {
+        padding-left: 15px;
+      }
+      ul > li {
+        color: #00FF00;
+        & > a {
+          color: #00FF00;
+          text-transform: uppercase;
+          // text-decoration: none;
+        }
+      }
+      ul > li:nth-child(2n) {
+        color: #FF00CC;
+        & a {
+          color: #FF00CC;
+          text-transform: uppercase;
+        }
+      }
+      .wrapper {
+        font-family: 'VT323', monospace;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .list {
+        height: calc(100vh - 26px);
+        background-color: #000;
+        margin-top: 20px;
+        &_header {
+          display: flex;
+          justify-content: space-between;
+          background-color: blue;
+          padding: 0 10px;
+          &_left {
+            height:24px;
+            display: flex;
+            &_copy {
+              height:24px;
+              font-size: 12px;
+              margin-right: 10px;
+              text-transform: uppercase;
+              font-weight: bold;
+              color: #FFFF00;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            & a {
+              background-color: red;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              padding: 0 10px;
+              text-decoration: none;
+              color: #fff;
+            }
+            & a:hover {
+              bottom: 2px;
+              box-shadow: 2px 2px #000;
+            }
+          }
+        }
+        &_main {
+          display: flex;
+          height: calc(100% - 54px);
+        }
+        &_main_aside {
+          width: 20%;
+          overflow: scroll;
+          padding-left: 10px;
+        }
+        &_main_aside > ul {
+          padding-left: 0;
+          margin: 10px 0;
+            & li:before {
+              content: none;
+            }
+            & li > a {
+              text-decoration: none;
+            }
+            & li:hover {
+              & > a:after{
+                content: " >>>";
+                color: #fff;
+              }
+            }
+        }
+        &_main_page {
+          width: 80%;
+          // margin: 10px 0;
+          padding-top: 10px;
+          padding-left: 10px;
+          border-left: 4px solid blue;
+          overflow: scroll;
+          & li {
+            display: flex;
+            white-space: nowrap;
+          }
+          & li:hover {
+            &:after{
+              content: " ...........................................................................................................................................................................................................................";
+              text-decoration: none !important;
+              width: 100%;
+              overflow: hidden;
+              color: blue;
+              line-height: 0.8em;
+              animation: flash .4s linear infinite;
+            }
+            @keyframes flash {
+              40% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        &_footer {
+          display: flex;
+          padding-left: 10px;
+          background-color: blue;
+          &_date {
+            width: 100%;
+            margin-right: 10px;
+            text-align: right;
+          }
+        }
+      }
+      .attension {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="list">
+        <div class="list_header">
+          <h1>OSINT</h1>
+          <div class="list_header_left">
+            <p class="list_header_left_copy">copyright(c)2021</p>
+            <a href="/">EXIT</a>
+          </div>
+        </div>
+        <div class="list_main">
+          <div class="list_main_aside">
+            <ul>
+              <li><a href="#osint">OSINT</a></li>
+              <li><a href="#search">SEARCH</a></li>
+              <li><a href="#darkwebsearch">Search(dark)</a></li>
+              <!-- <li><a href="#onion">ONION</a></li> -->
+              <li><a href="#twitter">twitter</a></li>
+              <li><a href="#github">github</a></li>
+            </ul>
+          </div>
+          <div class="list_main_page">
+            <!-- ############## OSINT paragraph ############## -->
+            <h2 id="osint">OSINT</h2>
+            <ul>
+              <li><a href="https://osint.link/">osint.link</a></li>
+              <li><a href="https://cheatsheet.haax.fr/">OFFENSIVE SECURITY CHEATSHEET</a></li>
+              <li><a href="https://inteltechniques.com/">IntelTechniques</a></li>
+              <li><a href="https://github.com/laramies/theHarvester">theHarvester</a></li>
+              <li><a href="https://sherlock-project.github.io/">sherlock</a></li>
+              <li><a href="https://whois.domaintools.com/">domaintools</a></li>
+            </ul>
+            <!-- ############## OSINT paragraph ############## -->
+
+            <!-- ############## Search paragraph ############## -->
+            <h2 id="search">Search</h2>
+            <ul>
+              <li><a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Google</a></li>
+              <li><a href="http://www.bing.com" target="_blank" rel="noopener noreferrer">Bing</a></li>
+              <li><a href="http://www.yahoo.com" target="_blank" rel="noopener noreferrer">Yahoo</a></li>
+              <li><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">duckduckgo</a></li>
+              <li><a href="http://www.aol.com" target="_blank" rel="noopener noreferrer">AOL</a></li>
+            </ul>
+            <!-- ############## Search paragraph ############## -->
+
+            <!-- ############## darkwebsearch paragraph ############## -->
+            <h2 id="darkwebsearch">Search(dark)</h2>
+            <p class="attension">Attension - It also includes things that are not .onion.(Including gateways)</p>
+            <ul>
+              <li><a href="https://ahmia.fi/" target="_blank" rel="noopener noreferrer">ahmia</a></li>
+              <li><a href="https://eu.onionsearchengine.com/" target="_blank" rel="noopener noreferrer">Onion Search Engine</a></li>
+              <li><a href="https://darksearch.io/" target="_blank" rel="noopener noreferrer">darksearch</a></li>
+              <li><a href="https://xmh57jrzrnw6insl.onion.pet/" target="_blank" rel="noopener noreferrer">Torch</a></li>
+              <li><a href="https://hss3uro2hsxfogfq.onion.sh/" target="_blank" rel="noopener noreferrer">Not Evil</a></li>
+              <li><a href="http://gjobqjj7wyczbqie.onion/" target="_blank" rel="noopener noreferrer">Candle</a></li>
+              <li><a href="http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page" target="_blank" rel="noopener noreferrer">The Uncensored Hidden Wiki</a></li>
+              <li><a href="http://kpynyvym6xqi7wz2.onion" target="_blank" rel="noopener noreferrer">Parazite</a></li>
+              <li><a href="http://torlinkbgs6aabns.onion/" target="_blank" rel="noopener noreferrer">TorLinks</a></li>
+              <li><a href="https://gibiru.com/" target="_blank" rel="noopener noreferrer">gibiru</a></li>
+              <li><a href="http://haystakvxad7wbk5.onion/" target="_blank" rel="noopener noreferrer">HayStack</a></li>
+              <li><a href="http://tordex7iie7z2wcg.onion/" target="_blank" rel="noopener noreferrer">TorDex</a></li>
+            </ul>
+            <!-- ############## darkwebsearch paragraph ############## -->
+
+            <!-- ############## Onion paragraph ############## -->
+            <!-- <h2 id="onion">Onion</h2>
+            <ul>
+              <li><a href="https://osint.link/">osint.link</a></li>
+              <li><a href="https://cheatsheet.haax.fr/">OFFENSIVE SECURITY CHEATSHEET</a></li>
+              <li><a href="https://inteltechniques.com/">IntelTechniques</a></li>
+              <li><a href="https://github.com/laramies/theHarvester">theHarvester</a></li>
+              <li><a href="https://sherlock-project.github.io/">sherlock</a></li>
+              <li><a href="https://whois.domaintools.com/">domaintools</a></li>
+            </ul> -->
+            <!-- ############## Onion paragraph ############## -->
+
+            <!-- ############## twitter paragraph ############## -->
+            <h2 id="twitter">twitter</h2>
+            <ul>
+              <li><a href="https://twitter.com/search-home" target="_blank" rel="noopener noreferrer">Twitter search home </a></li>
+              <li><a href="https://twitter.com/search-advanced" target="_blank" rel="noopener noreferrer">Twitter advanced search page </a></li>
+              <li><a href="https://tweetdeck.twitter.com/" target="_blank" rel="noopener noreferrer">Twitter Deck </a></li>
+              <li><a href="https://www.allmytweets.net/" target="_blank" rel="noopener noreferrer">All My Tweets</a></li>
+              <li><a href="https://www.trendsmap.com/" target="_blank" rel="noopener noreferrer">Trendsmap</a></li>
+              <li><a href="http://foller.me/" target="_blank" rel="noopener noreferrer">Foller</a></li>
+              <li><a href="http://ctrlq.org/first/" target="_blank" rel="noopener noreferrer">First Tweet</a></li>
+              <li><a href="https://socialbearing.com/" target="_blank" rel="noopener noreferrer">Social bearing</a></li>
+              <li><a href="http://twicsy.com/" target="_blank" rel="noopener noreferrer">Twicsy</a></li>
+              <li><a href="https://moz.com/followerwonk/analyze" target="_blank" rel="noopener noreferrer">Follower wonk </a></li>
+              <li><a href="http://sleepingtime.org/" target="_blank" rel="noopener noreferrer">Sleeping Time</a></li>
+              <li><a href="https://github.com/x0rz/tweets_analyzer" target="_blank" rel="noopener noreferrer">tweets analyzer</a></li>
+              <li><a href="https://tagboard.com/" target="_blank" rel="noopener noreferrer">Tag board</a></li>
+              <li><a href="https://tinfoleak.com/" target="_blank" rel="noopener noreferrer">TINFOLEAK</a></li>
+              <li><a href="https://spoonbill.io/" target="_blank" rel="noopener noreferrer">Spoonbill</a></li>
+              <li><a href="https://www.exporttweet.com/" target="_blank" rel="noopener noreferrer">Export Tweet</a></li>
+            </ul>
+            <!-- ############## twitter paragraph ############## -->
+
+            <!-- ############## github paragraph ############## -->
+            <h2 id="github">github</h2>
+            <ul>
+              <li><a href="https://github.com/laramies/theHarvester">theHarvester</a></li>
+              <li><a href="https://github.com/jmortega/osint_tools_security_auditing">OSINT tool for security auditing</a></li>
+            </ul>
+            <!-- ############## github paragraph ############## -->
+          </div>
+        </div>
+
+        <div class="list_footer">
+          <p class="list_footer_date">LOGIN:{latestDate}</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

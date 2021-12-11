@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/project.astro
-title: 特定のユーザー名が使われているサービスをネット上から全て洗い出す
+title: 全てのSNS, サービスから特定のユーザー名を検索
 client: Self
 published_at: 2021-12-5
 img: /assets/test.jpeg
@@ -43,6 +43,8 @@ $ git clone https://github.com/sherlock-project/sherlock.git
 
 # Sherlockに移動
 $ cd sherlock
+
+python3 -m pip install -r requirements.txt
 ```
 
 Sherlockに移動したら下記コマンドを打ってください。  
