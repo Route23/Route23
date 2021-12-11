@@ -42,11 +42,10 @@ import MainHead from '../../components/MainHead.astro';
       .enter {
         margin-left: 10px;
       }
-      .material-icons {
-        font-size: 64px;
+      .attention_logo {
+        width: 64px;
         margin: 0;
         margin-top: 10px;
-        color: #ffc800;
         // text-shadow: 1px 1px 30px #fff, 1px 1px 12px #fff, 2px 5px 60px #fff;
         animation: blink 3s infinite alternate;
       }
@@ -81,7 +80,13 @@ import MainHead from '../../components/MainHead.astro';
     <main class="wrapper">
       <div class="attention">
         <h1>Attention</h1>
-        <p class="material-icons">warning_amber</p>
+        <!-- <p class="material-icons">warning_amber</p> -->
+        <svg class="attention_logo" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 301.761 301.761" style="enable-background:new 0 0 64.761 64.761;" xml:space="preserve" fill="#ffc800">
+        <path d="M150.881,17.519L0,284.241h301.761L150.881,17.519z M168.072,104.046l-6.85,105.73h-20.678l-6.85-105.73H168.072z
+          M150.88,255.995c-9.755,0-17.663-7.908-17.663-17.663c0-9.755,7.908-17.663,17.663-17.663c9.755,0,17.663,7.908,17.663,17.663
+          C168.543,248.087,160.635,255.995,150.88,255.995z"/>
+        </svg>
         <p class="quote">On the next page, you will find <span class="dot">criminal</span>, <span class="dot">violent</span>, and <span class="dot">nsfw</span> expressions.</p>
         <div class="flex">
           <a class="back" href="/">Back</a>
