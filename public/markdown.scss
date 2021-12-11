@@ -25,20 +25,20 @@ a {
   // background-color: var(--t-fg);
   // background-repeat: no-repeat;
   // background-size: cover;
-  
   filter: grayscale(100);
 }
 .title {
   margin-top: 70px;
-  // padding: 0 32px;
-  color: #fff;
   text-align: left;
   letter-spacing: .0625em;
   text-transform: uppercase;
+  word-break: keep-all;
+  // padding: 0 32px;
+  color: #fff;
   font-size: 24px;
   font-weight: 900;
+
   overflow-wrap: break-word;
-	word-break: keep-all;
 }
 // -----------
 // main content
@@ -82,10 +82,10 @@ a {
       text-transform: uppercase;
       color: #000;
       border-radius: 4px;
-      line-height: 1.2;
       background-color: #ffc800;
       font-size: 12px;
       font-weight: 900;
+      line-height: 1.2;
       &:first-child {
         margin-left: 0;
       }

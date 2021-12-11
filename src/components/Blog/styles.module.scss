@@ -40,10 +40,11 @@
   letter-spacing: .0625em;
   text-transform: uppercase;
   text-overflow: ellipsis;
+  word-break: keep-all;
   font-size: 20px;
   font-weight: 900;
+
   overflow-wrap: break-word;
-	word-break: keep-all;
 }
 .flex {
   display: flex;
