@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/ocat
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://route23.pages.dev
+  * I am ocat (https://keybase.io/ocat) on keybase.
+  * I have a public key with fingerprint D8D7 7305 F799 C59F 93CB  6FDB 3B0E 8E08 95DA C8B8
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101db647c4169166b0d64539ca38445433de113abb86f1e49bb56be8425148306570a",
+      "fingerprint": "d8d77305f799c59f93cb6fdb3b0e8e0895dac8b8",
+      "host": "keybase.io",
+      "key_id": "3b0e8e0895dac8b8",
+      "kid": "0101db647c4169166b0d64539ca38445433de113abb86f1e49bb56be8425148306570a",
+      "uid": "0a77b82972e66dc80599f4fb8fcc0119",
+      "username": "ocat"
+    },
+    "service": {
+      "hostname": "route23.pages.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1641777894,
+  "expire_in": 157680000,
+  "prev": "f02e3564fb27201f04d844df1d8955c4f5360638576123e3875a20f9281d0285",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMIsAnicrVJpbA1RFH5Pa2uQkibWqgyJ4qXunfXOU6RtKvIU0QTP+syde6cmr50Z
+M9MtVCIhEZXSH60QQlOa0EaKSvwRa6wRQuRZaom9IkioJRHcsfzz0/1zcs/5vu+c
+8+WcH5wWyghPq/Y/PWye0Rm+emZnZUi7v+XFWg7bpJaLruWS9Feg5YR6fiJpEi7K
+AQggwbKo6CKUVSjLGBBZlARV1wQkipIoCIRCKGgYI9mAVFQxlmRMkchLUEQCkCUF
+aFyEM0yrjLqOa1o+kyWIKIoAJENRVV1SDVXQsWwQLGBAEQVIlYimI4wYcbXtBQw2
+HNY8mmfaLMc+iV/j/QP/n+eu/C2nKQpGvKrwVJaJjoCkqoZoYGToOoBQDYAedS2t
+gjK0rWs+VxfhWKbK1GlgarDFn6prV/qUF/IcrYx6eYRWMbLj2r6t2+WsvNr3HS8a
+0P1aJ8BXU5z4o5TApkWYkYxRRV3PtC0uChlS981AGsoiVBQFqWKEozWO6dKEGSAk
+RUaAvaAPaxflDMBTQZLZArzCA2gAkTBTiAEJc1LSRUMSZCALiBEhL1ABKZLGA0Pl
+ESSARxIX7LbGspk2E/W1MqbpmWWW5le6lKs7e3p5eiicEerXt09wYaGMgZl/7+7h
+/v4/SkKzsnq6x17u2ljQFf/yKD2ErWa9qOblotwJBU5LV9fRmtcPOgrj63tT2RNj
+w9bFpcWrto1qGwbHHR9+78zC9+/an75d9vFDMvPyydFKqvuYMbMb1l3M7hzfcFs8
+mnS3rXgVe2wcCzfEP8+p2D19ynX/8NJi50rpIWvHqSU3n9c3f0+7MXvojWtfGi/Z
+MWGrePHms0HlOa2bWkc07Row5oKb9bX6fmTDuqKe1AJ/QVsfZW59x8HEvG/h+Vlv
+0/ZMKa3JzP7QOKGxfe+dwp62/lf2VcfmvmhITX4yYmX+1JylxU39nFu9/hvvSEV9
+jJzLLUmk3Lsn8g+cypi0fcjIupbo3c25i38C48w/JA==
+=WFoa
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ocat
+
+==================================================================
