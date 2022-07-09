@@ -22,6 +22,7 @@ import MainHead from '../../components/MainHead.astro';
   }
   .flex {
     display: flex;
+    font-size: 14px;
   }
   .profile_img {
     width: 150px;
@@ -29,7 +30,16 @@ import MainHead from '../../components/MainHead.astro';
     position: relative;
   }
   .vertical {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+  }
+  .w {
+    width: 100%;
+  }
+  .f {
     margin-left: 20px;
+    flex-direction: column;
   }
   h1 #resume {
     margin-top: 0 !important;
@@ -44,7 +54,14 @@ import MainHead from '../../components/MainHead.astro';
       position: relative;
     }
     .vertical {
-      margin-left: 20px;
+      margin-left: -8px;
+      font-size: 14px !important;
+    }
+    .sec {
+      display:none !important;
+    }
+    .wo {
+      display:none !important;
     }
   }
   @media screen and (min-width: 451px) {
@@ -89,46 +106,68 @@ import MainHead from '../../components/MainHead.astro';
 
 <div class="flex">
   <img src="/assets/resume/me.jpeg" alt="" class="profile_img">
-  <div class="vertical">
-  ### Date of Birth
-  -- June 23, 1997
-  ### Nationality
-  -- Japanese
-  ### Martial Status
-  -- Single
+  <div class="f">
+    <div class="wo">
+    ### Work
+    -- System / Frontend Engineer
+    </div>
+    <div class="flex">
+      <div class="vertical">
+      ### Date of Birth
+      -- June 23, 1997
+      ### Nationality
+      -- Japanese
+      ### Martial Status
+      -- Single
+      </div>
+      <div class="vertical sec">
+      ### Age
+      -- 25
+      ### Address
+      -- Tokyo
+      ### Martial Status
+      -- Single
+      </div>
+    </div>
   </div>
 </div>
 
 
 ## **WORK EXPERIENCE**
 
-System Engineer / Frontend Engineer
-
-
 ### Programming learning service(Start up)
-> April 2020 -- December 2020
-*A service that allows users to buy and sell programming learning content without the need for environment development.I was mainly responsible for static coding of all administration and user screens, validation of payment screens, and implementation of component UI using Atomic Design. I also introduced and implemented unit tests using Jest almost entirely on my own.It was a great project that I was assigned to as a new graduate and it gave me a lot of experience.*  
-(HTML5, CSS3, JavaScript, Vue.js, Webpack, ESLint, Jest, AdobeXD, Github, Trello)
+> Apr 2020 -- Dec 2020
+*A service that allows users to buy and sell programming learning content without the need for environment development. I was mainly responsible for static coding of all administration and user screens, validation of payment screens, and implementation of component UI using Atomic Design. I also introduced and implemented unit tests using Jest almost entirely on my own.It was a great project that I was assigned to as a new graduate and it gave me a lot of experience.*  
+(HTML5, CSS3, JavaScript, Vue.js, Webpack, ESLint, Jest, AdobeXD)
 
 ---
 
 ### Creation of a new business website for a major telecommunications company
-> January 2021
+> Jan 2021
 *Created a website to announce a new project for a major telecommunications company.The main tasks were to create new pages, fix bugs, and modify processing.*  
-(HTML5, CSS3, JavaScript, Handlebar.js, jQuely, AdobeXD, Github)
+(HTML5, CSS3, JavaScript, Handlebar.js, jQuely, AdobeXD)
 
 ---
 
 ### Maintenance and operation of a major recruiting service
-> February 2021 -- March 2021
-*Due to confidentiality agreements, I can't give you any details.*
+> Feb 2021 -- Mar 2021
+Performed operations and maintenance of a major recruiting firm's new graduate website using internal tools and legacy technology.  
+The massive amount of checklists ensured the highest level of security against minor changes. It was a rather unusual site where we spent more time on that checklist than writing code.
+(HTML4, Java-based web frameworks)
 
 ---
 
-### Store terminal application development for a major cosmetics manufacturer
-> April 2021 -- Current
+### Store terminal application development for a major cosmetics manufacturer &
+### E-commerce site maintenance for hair and skin care business
+> Apr 2021 -- Dec 2021
 *In this project, developed an application to manage customer information in a store.My main task was to create screens, connect APIs, and test them with the latest front-end technologies.*  
-(Pug, Stylus, JavaScript, Vue.js, Nuxt.js, AdobeXD, Github, Backlog)
+(Pug, Stylus, JavaScript, Vue.js, Nuxt.js, AdobeXD)
+
+---
+
+### BtoB services with internal PaaS for microservice development
+> Jan 2022 -- Current
+(Vue.js, deno, cuelang)
 
 
 ## **TERTIARY**
@@ -152,24 +191,13 @@ System Engineer / Frontend Engineer
 
 ## CONTACT
 Tokyo, Japan  
-090-9167-1690  
 Email:tetrapasta02@gmail.com  
 Github:[Coordinate-Cat](https://github.com/Coordinate-Cat) 
 
-<!-- ---
-
-## INTEREST (in something)
-
-<span>Jamstack</span>
-<span>Svelte</span>
-<span>OS</span>
-<span>OSS</span>
-<span>UI/UX Design</span> -->
----
-Would you like to know more?
+<!-- Would you like to know more?
 <a href="/docs/stats">
   View More(Stats page)
-</a>
+</a> -->
 
 </Markdown>
 <!-- Astro’s Markdown Component -->
